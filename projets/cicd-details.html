@@ -70,7 +70,7 @@
         <nav class="breadcrumbs">
           <ol>
             <li><a href="../index.html">Accueil</a></li>
-            <li class="current">Mise en place d'une VM</li>
+            <li class="current">Pipeline CI/CD</li>
           </ol>
         </nav>
       </div>
@@ -80,24 +80,71 @@
     <section id="portfolio-details" class="portfolio-details section">
 
       <div class="container" data-aos="fade-up">
+
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+
+            <div class="swiper-slide">
+              <img src="../assets/img/cicd/pipelineworking.png" alt="">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="../assets/img/cicd/pipelinefailed.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/img/cicd/pipelinedev.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/img/cicd/pipelinefonct.png" alt="">
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
         <div class="row justify-content-between gy-4 mt-4">
 
           <div class="col-lg-8" data-aos="fade-up">
             <div class="portfolio-description">
-              <h2>Mise en place du machine virtuelle</h2>
+              <h2>Mise en place d'une pipeline CI/CD sur Gitlab</h2>
               <p>
-                Projet de création et de mise en place d'une machine virtuelle avec la création de centaines d'utilisateur avec des droits différents.
+                Dans ce projet de l'IUT l'objectif était de mettre en place un système d'intégration et de déploiement continu sur un projet sur lequel on a déjà travaillé, j'ai choisi de travailler avec un projet angular. <!--METTRE LIEN-->
+                <br/><br/>
+                Pour la réalisation de ce pipeline, j'ai separé le projet en 3 environnements : développement, production et branche de fonctionnalité : 
+                <ul>
+                  <li>Lors d'un commit sur la branche principale on met en place l'environement, on vérifie si le projet compile, si les tests fonctionnent et si tout marche on déploie l'application avec un docker et on crée une release</li>
+                  <li>Sur la branche de dev on fait la même chose en deployant à un endroit différent et sans créer de release</li>
+                  <li>Sur une branche de fonctionnalité, on ne deploie pas et on ne crée pas de release </li>
+                </ul>
               </p>
 
               <p>
-                Ce projet m'a permis d'apprendre à mettre en place des machines virtuelles simple et les parametrer selon des demandes précises. J'ai pu améliorer mes compétences en script shell et d'administration système avec un terminal en bash sous une distribution linux.
-              <p>
-                Ce projet est lié aux compétences de BUT suivantes : 
+                Ce projet est lié à la compétence de BUT suivante : 
 
                 <ul>
                   <li>Réaliser un développement d'application</li>
+                  <li>Optimiser des applications informatique</li>
                   <li>Administrer des systèmes informatiques communicants et complexes</li>
-                  <li>Travailler dans une équipe informatique</li>
                 </ul>
               </p>
             </div>
@@ -107,9 +154,10 @@
             <div class="portfolio-info">
               <h3>Informations sur le projet</h3>
               <ul>
-                <li><strong>Langages</strong>Shell, Bash</li>
-                <li><strong>Logiciels</strong>Virtual Box</li>
-                <li><strong>Date de création</strong>Mars, 2023</li>
+                <li><strong>Langages</strong>TypeScript, Angular, Karma</li>
+                <li><strong>Logiciels</strong>Docker, Git</li>
+                <li><strong>Date de création</strong>22 Novembre, 2024</li>
+                <li><strong>URL du projet</strong> <a href="https://gitlab.iut-blagnac.fr/npagnucco/automatisation-projet-pagnucco">Lien gitlab</a></li>
               </ul>
             </div>
           </div>
