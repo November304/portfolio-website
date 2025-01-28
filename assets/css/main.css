@@ -1187,6 +1187,15 @@ section,
   color: #333;
 }
 
+/* Images des slides */
+.custom-slide-image {
+  width: 100%; /* Adapte l'image à la largeur de son conteneur */
+  max-width: 300px; /* Taille maximale pour les images */
+  height: auto; /* Conserve les proportions des images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile */
+}
+
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
