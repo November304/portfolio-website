@@ -1071,6 +1071,7 @@ section,
 }
 
 .portfolio-details .portfolio-description p {
+  text-align: justify;
   padding: 0;
 }
 
