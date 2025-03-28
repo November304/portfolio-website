@@ -1,0 +1,198 @@
+[
+    { 
+        "name": "JavaScript", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", 
+        "image": null,
+        "category": "Langage",
+        "experienceLevel": 2
+    },
+    { 
+        "name": "React", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", 
+        "image": null,
+        "category": "Framework",
+        "experienceLevel": 1
+    },
+    { 
+        "name": "Node.js", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", 
+        "image": null,
+        "category": "Framework",
+        "experienceLevel": 2
+    },
+    { 
+        "name": "Python", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", 
+        "image": null,
+        "category": "Langage",
+        "experienceLevel": 3
+    },
+    { 
+        "name": "Astro", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg", 
+        "image": null,
+        "category": "Framework",
+        "experienceLevel": 2
+    },
+    { 
+        "name": "Visual Studio Code", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg", 
+        "image": null,
+        "category": "Logiciel",
+        "experienceLevel": 4
+    },
+    { 
+        "name": "Git", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", 
+        "image": null,
+        "category": "Logiciel",
+        "experienceLevel": 4
+    },
+    { 
+        "name": "Docker", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", 
+        "image": null,
+        "category": "Logiciel",
+        "experienceLevel": 2
+    },
+    { 
+        "name": "TypeScript", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", 
+        "image": null,
+        "category": "Langage",
+        "experienceLevel": 2
+    },
+    { 
+        "name": "C#", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg", 
+        "image": null,
+        "category": "Langage",
+        "experienceLevel": 4
+    },
+    { 
+        "name": ".NET", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg", 
+        "image": null,
+        "category": "Framework",
+        "experienceLevel": 4
+    },
+    { 
+        "name": "Java", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", 
+        "image": null,
+        "category": "Langage",
+        "experienceLevel": 3
+    },
+    { 
+        "name": "SQL", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", 
+        "image": null,
+        "category": "Langage",
+        "experienceLevel": 4
+    },
+    { 
+        "name": "Angular", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg", 
+        "image": null,
+        "category": "Framework",
+        "experienceLevel": 2
+    },
+    { 
+        "name": "HTML", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", 
+        "image": null,
+        "category": "Langage",
+        "experienceLevel": 3
+    },
+    { 
+        "name": "CSS", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", 
+        "image": null,
+        "category": "Langage",
+        "experienceLevel": 2
+    },
+    { 
+        "name": "PHP", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", 
+        "image": null,
+        "category": "Langage",
+        "experienceLevel": 2
+    },
+    { 
+        "name": "Symfony", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg", 
+        "image": null,
+        "category": "Framework",
+        "experienceLevel": 3
+    },
+    { 
+        "name": "Django", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg", 
+        "image": null,
+        "category": "Framework",
+        "experienceLevel": 2
+    },
+    { 
+        "name": "Unity", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg", 
+        "image": null,
+        "category": "Logiciel",
+        "experienceLevel": 4
+    },
+    { 
+        "name": "Visual Studio", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg", 
+        "image": null,
+        "category": "Logiciel",
+        "experienceLevel": 4
+    },
+    { 
+        "name": "Eclipse", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg", 
+        "image": null,
+        "category": "Logiciel",
+        "experienceLevel": 1
+    },
+    { 
+        "name": "Godot", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg", 
+        "image": null,
+        "category": "Logiciel",
+        "experienceLevel": 1
+    },
+    { 
+        "name": "Spring", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg", 
+        "image": null,
+        "category": "Framework",
+        "experienceLevel": 1
+    },
+    { 
+        "name": "Quasar", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/quasar/quasar-original.svg", 
+        "image": null,
+        "category": "Framework",
+        "experienceLevel": 1
+    },
+    { 
+        "name": "SonarQube", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sonarqube/sonarqube-original.svg", 
+        "image": null,
+        "category": "Logiciel",
+        "experienceLevel": 1
+    },
+    { 
+        "name": "Blender", 
+        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg", 
+        "image": null,
+        "category": "Logiciel",
+        "experienceLevel": 2
+    },
+    { 
+        "name": "DaVinci Resolve", 
+        "iconUrl": null, 
+        "image" : "icon_davinciresolve",
+        "category": "Logiciel",
+        "experienceLevel": 2
+    }
+]
