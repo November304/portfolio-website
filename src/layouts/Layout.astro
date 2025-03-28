@@ -1,22 +1,25 @@
-<!doctype html>
-<html lang="en">
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title, 
+  description = "Portfolio personnel développé avec Astro" 
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content={description}>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
-	<body>
+	<body class="bg-gray-100 font-sans leading-normal tracking-normal">
 		<slot />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
