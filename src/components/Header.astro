@@ -1,8 +1,41 @@
-<header class="text-center mb-16">
-    <h1 class="text-5xl font-bold text-gray-800 mb-4">
-        Test Test
-    </h1>
-    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-        Développeur | Game Designer 
-    </p>
-</header>
+<nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 shadow-md">
+    <div class="container mx-auto flex justify-between items-center py-4 px-4">
+        <div class="text-2xl font-bold">Test TEst</div>
+        <ul class="flex space-x-6">
+            <li><a href="#home" class="nav-link" data-section="home">Accueil</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">À Propos</a></li>
+            <li><a href="#journey" class="nav-link" data-section="journey">Parcours</a></li>
+            <li><a href="#tools" class="nav-link" data-section="tools">Outils</a></li>
+            <li><a href="#projects" class="nav-link" data-section="projects">Projets</a></li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+    // Script pour gérer la navigation active
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section');
+
+    function updateActiveLink() {
+        let currentSection = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+                currentSection = section.id;
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('border-b-2', 'border-blue-500');
+            if (link.getAttribute('data-section') === currentSection) {
+                link.classList.add('border-b-2', 'border-blue-500');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveLink);
+    window.addEventListener('load', updateActiveLink);
+</script>

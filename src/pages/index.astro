@@ -1,64 +1,29 @@
 ---
 import "../styles/global.css";
-import MainLayout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import ProjectCard from '../components/ProjectCard.astro';
+import Footer from "../components/Footer.astro";
+import Home from '../components/sections/Home.astro';
+import About from '../components/sections/About.astro';
+import Journey from '../components/sections/Journey.astro';
+import Tools from '../components/sections/Tools.astro';
+import Projects from '../components/sections/Projects.astro';
 ---
-<MainLayout title="Portfolio - Votre Nom">
-    <div class="container mx-auto px-4 py-16">
-        <Header />
-        
-        <main>
-            <section class="grid md:grid-cols-2 gap-8 mb-16">
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <h2 class="text-3xl font-semibold mb-4 text-gray-700">
-                        À Propos de Moi
-                    </h2>
-                    <p class="text-gray-600">
-                        Je suis un développeur passionné dédié à la création de solutions web innovantes. 
-                        Avec un œil attentif pour le design et un amour pour un code propre et efficace, 
-                        je transforme les idées en expériences numériques.
-                    </p>
-                </div>
-
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <h2 class="text-3xl font-semibold mb-4 text-gray-700">
-                        Compétences
-                    </h2>
-                    <ul class="space-y-2">
-                        <li class="flex items-center">🚀 Astro</li>
-                        <li class="flex items-center">💻 JavaScript</li>
-                        <li class="flex items-center">🎨 Tailwind CSS</li>
-                        <li class="flex items-center">⚛️ React</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="text-center">
-                <h2 class="text-4xl font-bold mb-8 text-gray-800">
-                    Projets Phares
-                </h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <ProjectCard 
-                        title="Projet 1" 
-                        description="Description de votre premier projet"
-                        link="#" 
-                    />
-                    <ProjectCard 
-                        title="Projet 2" 
-                        description="Description de votre deuxième projet"
-                        link="#" 
-                    />
-                    <ProjectCard 
-                        title="Projet 3" 
-                        description="Description de votre troisième projet"
-                        link="#" 
-                    />
-                </div>
-            </section>
-        </main>
-
-        <Footer />
-    </div>
-</MainLayout>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Votre Portfolio</title>
+</head>
+<body class="bg-white text-gray-900">
+    <Header />
+    
+    <main>
+        <Home />
+        <About />
+        <Journey />
+        <Tools />
+        <Projects />
+    </main>
+	<Footer />
+</body>
+</html>
