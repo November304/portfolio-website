@@ -27,7 +27,7 @@ const icons = import.meta.glob<{ default: ImageMetadata }>('/src/assets/icons/*.
                 height={64}
                 class="w-16 h-16 mx-auto mb-4"
             />
-        ) : image ? (
+        )  : image ? (
             <Image
                 src={icons[image]()}
                 alt={name}
@@ -35,7 +35,7 @@ const icons = import.meta.glob<{ default: ImageMetadata }>('/src/assets/icons/*.
                 height={64}
                 class="w-16 h-16 mx-auto mb-4"
             />
-        ) : (
+        )  : (
             <div class="w-16 h-16 mx-auto mb-4 bg-gray-200 flex items-center justify-center rounded">
                 <span class="text-gray-500">N/A</span>
             </div>

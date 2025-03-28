@@ -2,85 +2,243 @@
     {
         "title": "No Need For Rogues",
         "description": "Jeu multijoueur en 3D, avec un chat vocal de proximité et reconnaissance vocale pour lancer des sorts.",
-        "technologies": ["Unity", "C#","Multijoueur", "Projet Perso"],
-        "link": "#"
+        "technologies": ["Unity", "C#"],
+        "tags": ["Multijoueur", "Projet Perso"],
+        "link": "#",
+        "slug": "no-need-for-rogues",
+        "images":["/src/assets/img/nnfr/image.png", "/src/assets/img/nnfr/image2.png", "/src/assets/img/nnfr/image3.png"],
+        "paragraphes" : [
+            "Mon premier jeu multijoueur sur Unity, l'idée principale du jeu était de faire un jeu multijoueur de coopération où les joueurs explorent un donjon remplit de pièges pour trouver des trésors.",
+            "Les fonctionnalitées principales du jeu sont : Un chat vocal de proximité avec l'aide de Vivox, un système de reconnaissance vocale qui identifie des mots clés pour lancer des sorts.",
+            "Ce jeu étant mon premier jeu multijoueur, j'ai appris beaucoup de choses sur le développement de jeux multijoueurs, comme la gestion des données entre le serveur et le client, la gestion des collisions entre les joueurs et les objets du jeu.",
+            "Le développement du jeu est actuellement en pause, la quantité de bugs et de problèmes sur le jeu et le code du jeu étaient très importants. Je compte reprendre le jeu dans le futur, peut-être en recommençant et en appliquant tout ce que j'ai appris sur le développement de jeux multijoueurs."
+        
+        ],
+        "githubLink": "https://github.com/CuboidCorp/NoNeedForRogues"
     },
     {
-        "title": "Auto QCM", 
+        "title": "Auto QCM",
         "description": "Outil de création de QCM avec IA, intégration Moodle/AMC, et pitch commercial pour développer des compétences en vidéo.",
-        "technologies": ["Django", "Equipe","BUT","Montage"],
-        "link": "#"
+        "technologies": ["Django"],
+        "tags": ["Equipe", "BUT", "Montage"],
+        "link": "#",
+        "slug": "auto-qcm",
+        "images": [
+            "/src/assets/img/autoqcm/correction.png",
+            "/src/assets/img/autoqcm/dashboard.png",
+            "/src/assets/img/autoqcm/listeqcm.png"
+        ],
+        "paragraphes": [
+            "Le projet Auto QCM a été réalisé dans le contexte d'un projet de groupe lors de mon BUT, l'objectif était de créer une application qui permet de générer des qcms personnalisés.",
+            "Le site web que nous avons crée en django permet aux enseignants de créer des qcm facilement mais aussi de générer des questions à partir d'un support de cours grâce à une intégration avec une IA générative.",
+            "De plus, Auto QCM se connecte aisément avec des plateformes telles que Moodle et AMC, assurant une interopérabilité efficace dans les environnements pédagogiques.",
+            "Il fallait également créer un pitch commercial pour le projet, ce qui m'a permis de développer mes compétences en montage vidéo et en présentation."
+        ],
+        "githubLink":"https://github.com/AlexiFon/AUTO-QCM-R5.08-Qdev"
     },
     {
-        "title": "Site Web locur4iot", 
+        "title": "Site Web locur4iot",
         "description": "Réalisation d'un site web interne pour la visualisation des données de capteurs de distance en intérieur.",
-        "technologies": ["PHP", "JavaScript","BUT","Equipe"],
-        "link": "#"
+        "technologies": ["PHP", "JavaScript"],
+        "tags": ["BUT", "Equipe"],
+        "link": "#",
+        "slug": "locur4iot",
+        "images": [
+            "/src/assets/img/locura/testbed_map.png",
+            "/src/assets/img/locura/diag.png"
+        ],
+        "paragraphes": [
+            "Réalisation d'un site web interne en PHP pour la visualisation des données de capteurs de distance en intérieur pour les chercheurs de l'équipe Locura4iot. ",
+            "Dans ce projet de l'IUT, j'ai du réaliser en équipe un site web qui permettait d'afficher des données émises avec le protocole MQTT par différents capteurs en se connectant au courtier mqtt du testbed présent à l'IUT. Il nous a fallu récupérer les données, les stocker en base de données, les afficher sur une page web et les mettre à jour en temps réel."
+        ],
+        "githubLink":null
     },
     {
         "title": "Countdown Crew",
         "description": "Jeu multijoueur de coopération, où un joueur doit désamorcer une bombe en communiquant avec un autre joueur qui a le manuel.",
-        "technologies": ["Unity", "C#","Multijoueur", "Projet Perso"],
-        "link": "#"
+        "technologies": ["Unity", "C#"],
+        "tags": ["Multijoueur", "Projet Perso"],
+        "link": "#",
+        "slug": "countdown-crew",
+        "images":[
+            "/src/assets/img/bombgame/bomb.png",
+            "/src/assets/img/bombgame/level.png",
+            "/src/assets/img/bombgame/logo.png",
+            "/src/assets/img/bombgame/manuel.png"
+        ],
+        "paragraphes": [
+            "Countdown Crew est un jeu multijoueur de coopération, où un joueur doit désamorcer une bombe en communiquant avec un autre joueur qui a le manuel.",
+            "Le jeu est inspiré du jeu 'Keep Talking and Nobody Explodes', mais j'ai voulu refaire ma propre version où j'introduis de l'aléatoire dans le manuel ainsi que des modules de mon invention.",
+            "Je suis actuellement en train de travailler sur ce jeu, j'ai l'intention de continuer de travailler dessus jusqu'à ce que je sois satisfait de son état, peut-être vers une release sur itch.io."
+        ],
+        "githubLink":"https://github.com/CuboidCorp/bomb-game"
     },
     {
         "title": "Tests de Shaders",
         "description": "Tests de création de différents shaders.",
-        "technologies": ["GLSL", "Projet Perso"],
-        "link": "#"
+        "technologies": ["GLSL"],
+        "tags": ["Projet Perso"],
+        "link": "#",
+        "slug": "shaders",
+        "images": [
+            "/src/assets/img/shaders/mandelbrot.webm",
+            "/src/assets/img/shaders/plasma.webm",
+            "/src/assets/img/shaders/spiral.webm",
+            "/src/assets/img/shaders/tutocross.webm",
+            "/src/assets/img/shaders/waterdrop.webm"
+        ],
+        "paragraphes": [
+            "Mes premiers shaders réalisés sur le site Shader Toys, pour une première introduction aux shaders j'apprécie ce que j'ai pu faire.",
+            "J'ai utilisé le langage GLSL pour créer ces shaders, et j'ai pu apprendre à écrire du code de manière différente, à penser en termes de pixels et de fragments.",
+            "J'ai hâte de tester les applications des shaders dans d'autres projets comme sur Unity, ou de tester d'autres formules pour voir ce que je peux faire. "
+        ],
+        "githubLink":null
     },
     {
         "title": "Flappy Bird",
         "description": "Création d'un jeu simple en cours de multimédia.",
-        "technologies": ["Unity","C#", "BUT"],
-        "link": "#"
+        "technologies": ["Unity", "C#"],
+        "tags": ["BUT"],
+        "link": "#",
+        "slug": "flappy-bird",
+        "images": [
+            "/src/assets/img/flappybird/flappydead.png",
+            "/src/assets/img/flappybird/flappyplay.png"
+        ],
+        "paragraphes": [
+            "Création d'un jeu simple en cours de multimédia lors de mon BUT, le but du projet était de créer un clone de flappy bird en 2D avec Unity.",
+            "Le cours était principalement axé sur la découverte d'Unity, qui m'était déjà familier, mais j'ai pu aller plus loin lors de la création de ce jeu.",
+            "J'ai pu mettre en place des animations, et des effets de parralax supplémentaires pour améliorer le rendu du jeu."
+        ],
+        "githubLink":null
     },
     {
         "title": "Mise en place d'une machine virtuelle",
         "description": "Projet de création d'une machine virtuelle Ubuntu avec la création d'utilisateurs avec des droits différents.",
-        "technologies": ["Shell","VM", "BUT","Equipe"],
-        "link": "#"
+        "technologies": ["Shell"],
+        "tags": ["VM", "BUT", "Equipe"],
+        "link": "#",
+        "slug": "machine-virtuelle",
+        "images" : [],
+        "paragraphes": [
+            "Mise en place d'une machine virtuelle Ubuntu avec la création d'utilisateurs avec des droits différents.",
+            "Le projet a été réalisé en équipe, et nous avons du mettre en place un système de gestion des utilisateurs et de leurs droits sur la machine virtuelle."
+        ],
+        "githubLink":null 
     },
     {
         "title": "Création d'un pipeline CI/CD",
         "description": "Mise en place d'un système d'intégration et de déploiement continu sur un projet.",
-        "technologies": ["Docker","Gitlab","CI/CD", "BUT", "Angular"],
-        "link": "#"
+        "technologies": ["Docker", "Gitlab", "CI/CD", "Angular"],
+        "tags": ["BUT"],
+        "link": "#",
+        "slug": "pipeline-ci-cd",
+        "images": [
+            "/src/assets/img/cicd/pipelinedev.png",
+            "/src/assets/img/cicd/pipelinefailed.png",
+            "/src/assets/img/cicd/pipelinefonct.png",
+            "/src/assets/img/cicd/pipelineworking.png"
+        ],
+        "paragraphes": [
+            "Mise en place d'un système d'intégration et de déploiement continu sur un projet, avec la création d'un pipeline CI/CD sur Gitlab.",
+            "Le projet était de créer une pipeline CI/CD sur un projet existant, sur ma pipeline j'ai décidé d'executer des tests, vérifier si le projet compile, et si tout fonctionne de deployer sur un serveur avec un conteneur docker.",
+            "Pour la réalisation de ce pipeline, j'ai separé le projet en 3 environnements : développement, production et branche de fonctionnalité : Lors d'un commit sur la branche principale on met en place l'environement, on vérifie si le projet compile, si les tests fonctionnent et si tout marche on déploie l'application avec un docker et on crée une release. Sur la branche de dev on fait la même chose en deployant à un endroit différent et sans créer de release. Sur une branche de fonctionnalité, on ne deploie pas et on ne crée pas de release."
+        ],
+        "githubLink":"https://gitlab.iut-blagnac.fr/npagnucco/automatisation-projet-pagnucco/"
     },
     {
         "title": "Création d'un site web Angular",
         "description": "Projet d'introduction à Angular, avec comme object la réalisation d'un site web pour gérer des exercices de routines sportives.",
-        "technologies": ["Angular","TypeScript", "BUT"],
-        "link": "#"
+        "technologies": ["Angular", "TypeScript"],
+        "tags": ["BUT"],
+        "link": "#",
+        "slug": "site-web-angular",
+        "images":[],
+        "paragraphes": [
+            "Création d'un site web Angular pour gérer des exercices de routines sportives, le projet était de créer un site web simple en angular avec une base de données très simple avec jsonServer"
+        ],
+        "githubLink":"https://gitlab.iut-blagnac.fr/npagnucco/automatisation-projet-pagnucco/"
     },
     {
         "title": "Création de tests BDD",
         "description": "Création de tests Cucumber en Gherkin pour valider les User Stories du projet AUTO QCM.",
-        "technologies": ["Gherkin","Python", "BUT","Equipe"],
-        "link": "#"
+        "technologies": ["Gherkin", "Python"],
+        "tags": ["BUT", "Equipe"],
+        "link": "#",
+        "slug": "tests-bdd",
+        "images":[
+            "/src/assets/img/cucumber/bigtest.png",
+            "/src/assets/img/cucumber/exempleTest.png",
+            "/src/assets/img/cucumber/test1.png"
+        ],
+        "paragraphes":[
+            "Création de tests Cucumber en Gherkin pour valider les User Stories du projet AUTO QCM.",
+            "Le projet était de créer des tests pour valider les User Stories du projet AUTO QCM, j'ai donc du créer des tests en équipe et les implémenter avec Cucumber avec une extension django django-behave.",
+            "J'ai pu apprendre à écrire des tests pour le Behaviour Driver Developpement (BDD), et à utiliser Cucumber pour les implémenter, même si dans le cas précis de ce projet il s'agissait de BDD rétroactif."
+        ],
+        "githubLink":"https://github.com/AlexiFon/AUTO-QCM-R5.08-Qdev"
     },
     {
         "title": "Application de stockage de lecture",
         "description": "Création d'une application Android Studio pour stocker des liens vers des sites de lecture.",
-        "technologies": ["Java", "Projet Perso"],
-        "link": "#"
+        "technologies": ["Java"],
+        "tags": ["Projet Perso"],
+        "link": "#",
+        "slug": "application-android",
+        "images":[
+            "/src/assets/img/android/ajout.png",
+            "/src/assets/img/android/liste.png",
+            "/src/assets/img/android/tri.png"
+        ],
+        "paragraphes":[
+            "Création d'une application Android Studio pour stocker des liens vers des sites de lecture.",
+            "Ma première application Android, elle permet de stocker les liens vers des sites pour la lecture typiquement (Livres, Mangas, Webtoons), les noter de manière personnelle, et vérifier si le chapitre ou la suite de l'histoire est disponible.",
+            "Il y a également des options de tri selon différents critères comme la date de dernière lecture, le nombre d'étoiles, le nombre de chapites lus."
+        ],
+        "githubLink":null
     },
     {
         "title": "Projet gestion de plats et menus",
         "description": "Création d'une application en spring pour gérer des plats et des menus.",
-        "technologies": ["Java","Spring", "BUT"],
-        "link": "#"
+        "technologies": ["Java", "Spring"],
+        "tags": ["BUT"],
+        "link": "#",
+        "slug": "gestion-plats-menus",
+        "images":[],
+        "paragraphes": [
+            "J'ai créé cette application pour un projet de mon BUT pour gérer les plats et menus avec un CRUD simple, filtrage et pagination.",
+            "L'interface permet d'éditer les menus, d'ajouter ou supprimer des plats, et de calculer les calories automatiquement.",
+            "J'ai intégré des notifications, un thème sombre/claire et des graphiques interactifs pour visualiser la répartition des calories."
+        ],
+        "githubLink":"https://github.com/November304/projetspring"
     },
     {
         "title": "Maintenance applicative",
         "description": "Réalisations de tests unitaires et tests de fonctionnement sur une application existante.",
-        "technologies": ["Vue","Pinia","Tests", "BUT"],
-        "link": "#"
+        "technologies": ["Vue", "Pinia"],
+        "tags": ["Tests", "BUT"],
+        "link": "#",
+        "slug": "maintenance-applicative",
+        "images":[],
+        "paragraphes": [
+            "Réalisation de tests unitaires et tests de fonctionnement sur une application existante.",
+            "Le projet était de réaliser des tests unitaires et de fonctionnement sur une application existante, j'ai eu à créer des tests sur un formulaire.",
+            "J'ai pu apprendre à utiliser Pinia pour la gestion d'état des tests et à créer des tests pour vue avec Karma."
+        ],
+        "githubLink":null
     },
     {
         "title": "Création d'un site web pour salle de sport",
         "description": "Création d'un site web avec un backend en PHP/Symfony et une base de données MariaDB, une API REST et un frontend en Angular.",
-        "technologies": ["PHP","MariaDB","Angular", "BUT","Equipe"],
-        "link": "#"
+        "technologies": ["PHP", "MariaDB", "Angular"],
+        "tags": ["BUT", "Equipe"],
+        "link": "#",
+        "slug": "site-web-salle-de-sport",
+        "images":[],
+        "paragraphes": [
+            "Création d'un site web avec un backend en PHP/Symfony et une base de données MariaDB, une API REST et un frontend en Angular.",
+            "Le projet était de créer un site web pour une salle de sport en équipe, je me suis chargé de la création de l'API REST ainsi que sa sécurisation, ainsi que de la création de données et l'affichage de statistiques pour les resposables de la salle."
+        ],
+        "githubLink":"https://github.com/November304/sae-S6-coach"
     }
 ]

@@ -191,7 +191,7 @@
     { 
         "name": "DaVinci Resolve", 
         "iconUrl": null, 
-        "image" : "icon_davinciresolve",
+        "image" : "/src/assets/icons/icon_davinciresolve.png",
         "category": "Logiciel",
         "experienceLevel": 2
     }
