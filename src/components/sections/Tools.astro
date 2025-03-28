@@ -1,162 +1,205 @@
 ---
 import { Image } from 'astro:assets';
 
+//Icones qui ne sont pas sur devicon
+import davinci from '../../assets/icons/icon_davinciresolve.png';
+
 const tools = [
     { 
         name: "JavaScript", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", 
-        category: "Langages",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", 
+        image: null,
+        category: "Langage",
         experienceLevel: 2
     },
     { 
         name: "React", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", 
-        category: "Frameworks",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", 
+        image: null,
+        category: "Framework",
         experienceLevel: 1
     },
     { 
         name: "Node.js", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", 
-        category: "Frameworks",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", 
+        image: null,
+        category: "Framework",
         experienceLevel: 2
     },
     { 
         name: "Python", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", 
-        category: "Langages",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", 
+        image: null,
+        category: "Langage",
         experienceLevel: 3
     },
     { 
         name: "Astro", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg", 
-        category: "Frameworks",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg", 
+        image: null,
+        category: "Framework",
         experienceLevel: 2
     },
     { 
         name: "Visual Studio Code", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg", 
-        category: "Logiciels",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg", 
+        image: null,
+        category: "Logiciel",
         experienceLevel: 4
     },
     { 
         name: "Git", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", 
-        category: "Logiciels",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", 
+        image: null,
+        category: "Logiciel",
         experienceLevel: 4
     },
     { 
         name: "Docker", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", 
-        category: "Logiciels",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", 
+        image: null,
+        category: "Logiciel",
         experienceLevel: 2
     },
     { 
         name: "TypeScript", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", 
-        category: "Langages",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", 
+        image: null,
+        category: "Langage",
         experienceLevel: 2
     },
     { 
         name: "C#", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg", 
-        category: "Langages",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg", 
+        image: null,
+        category: "Langage",
         experienceLevel: 4
     },
     { 
         name: ".NET", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg", 
-        category: "Frameworks",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg", 
+        image: null,
+        category: "Framework",
         experienceLevel: 4
     },
     { 
         name: "Java", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", 
-        category: "Langages",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", 
+        image: null,
+        category: "Langage",
         experienceLevel: 3
     },
     { 
         name: "SQL", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", 
-        category: "Langages",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", 
+        image: null,
+        category: "Langage",
         experienceLevel: 4
     },
     { 
         name: "Angular", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg", 
-        category: "Frameworks",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg", 
+        image: null,
+        category: "Framework",
         experienceLevel: 2
     },
     { 
         name: "HTML", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", 
-        category: "Langages",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", 
+        image: null,
+        category: "Langage",
         experienceLevel: 3
     },
     { 
         name: "CSS", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", 
-        category: "Langages",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", 
+        image: null,
+        category: "Langage",
         experienceLevel: 2
     },
     { 
         name: "PHP", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", 
-        category: "Langages",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", 
+        image: null,
+        category: "Langage",
         experienceLevel: 2
     },
     { 
         name: "Symfony", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg", 
-        category: "Frameworks",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg", 
+        image: null,
+        category: "Framework",
         experienceLevel: 3
     },
     { 
         name: "Django", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-original.svg", 
-        category: "Frameworks",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg", 
+        image: null,
+        category: "Framework",
         experienceLevel: 2
     },
     { 
         name: "Unity", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg", 
-        category: "Frameworks",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg", 
+        image: null,
+        category: "Logiciel",
         experienceLevel: 4
     },
     { 
         name: "Visual Studio", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg", 
-        category: "Logiciels",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg", 
+        image: null,
+        category: "Logiciel",
         experienceLevel: 4
     },
     { 
         name: "Eclipse", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg", 
-        category: "Logiciels",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg", 
+        image: null,
+        category: "Logiciel",
         experienceLevel: 1
     },
     { 
         name: "Godot", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg", 
-        category: "Frameworks",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg", 
+        image: null,
+        category: "Logiciel",
         experienceLevel: 1
     },
     { 
         name: "Spring", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg", 
-        category: "Frameworks",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg", 
+        image: null,
+        category: "Framework",
         experienceLevel: 1
     },
     { 
         name: "Quasar", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/quasar/quasar-original.svg", 
-        category: "Frameworks",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/quasar/quasar-original.svg", 
+        image: null,
+        category: "Framework",
         experienceLevel: 1
     },
     { 
         name: "SonarQube", 
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sonarqube/sonarqube-original.svg", 
-        category: "Logiciels",
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sonarqube/sonarqube-original.svg", 
+        image: null,
+        category: "Logiciel",
         experienceLevel: 1
+    },
+    { 
+        name: "Blender", 
+        iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg", 
+        image: null,
+        category: "Logiciel",
+        experienceLevel: 2
+    },
+    { 
+        name: "DaVinci Resolve", 
+        iconUrl: null, 
+        image : davinci,
+        category: "Logiciel",
+        experienceLevel: 2
     }
 ];
 ---
@@ -167,9 +210,9 @@ const tools = [
         <div class="flex justify-center mb-8 space-x-4">
             <select id="category-filter" class="px-4 py-2 border rounded">
                 <option value="">Toutes Catégories</option>
-                <option value="Langages">Langages</option>
-                <option value="Frameworks">Frameworks</option>
-                <option value="Logiciels">Logiciels</option>
+                <option value="Langage">Langages</option>
+                <option value="Framework">Frameworks</option>
+                <option value="Logiciel">Logiciels</option>
             </select>
             
             <select id="experience-filter" class="px-4 py-2 border rounded">
@@ -190,16 +233,24 @@ const tools = [
                 data-category={tool.category}
                 data-experience={tool.experienceLevel}
                 >
-                <Image src={tool.icon} alt={tool.name} width={64} height={64} class="w-16 h-16 mx-auto mb-4" />
-                <h3 class="text-xl font-semibold">{tool.name}</h3>
-                <div class="flex justify-center mt-2">
-                    {[...Array(4)].map((_, index) => (
-                    <span class={`text-2xl ${index < tool.experienceLevel ? 'text-yellow-500' : 'text-gray-300'}`}>
-                        ★
-                    </span>
-                    ))}
-                </div>
-                <p class="text-sm text-gray-500 mt-2">{tool.category}</p>
+                    {tool.iconUrl ? (
+                        <Image src={tool.iconUrl} alt={tool.name} width={64} height={64} class="w-16 h-16 mx-auto mb-4" />
+                    ) : tool.image ? (
+                        <Image src={tool.image} alt={tool.name} width={64} height={64} class="w-16 h-16 mx-auto mb-4" />
+                    ) : (
+                        <div class="w-16 h-16 mx-auto mb-4 bg-gray-200 flex items-center justify-center rounded">
+                            <span class="text-gray-500">N/A</span>
+                        </div>
+                    )}
+                    <h3 class="text-xl font-semibold">{tool.name}</h3>
+                    <div class="flex justify-center mt-2">
+                        {[...Array(4)].map((_, index) => (
+                        <span class={`text-2xl ${index < tool.experienceLevel ? 'text-yellow-500' : 'text-gray-300'}`}>
+                            ★
+                        </span>
+                        ))}
+                    </div>
+                    <p class="text-sm text-gray-500 mt-2">{tool.category}</p>
                 </div>
             ))}
         </div>
@@ -221,7 +272,7 @@ const tools = [
                 const cardExperience = parseInt(card.getAttribute('data-experience') || '0');
 
                 const categoryMatch = !selectedCategory || cardCategory === selectedCategory;
-                const experienceMatch = !selectedExperience || cardExperience >= selectedExperience;
+                const experienceMatch = !selectedExperience || cardExperience === selectedExperience;
 
                 (card as HTMLElement).style.display = (categoryMatch && experienceMatch) ? 'block' : 'none';
             });
