@@ -267,9 +267,9 @@
         "tags": ["Projet Perso"],
         "slug": "application-android",
         "images":[
-            "/src/assets/img/android/ajout.png",
-            "/src/assets/img/android/liste.png",
-            "/src/assets/img/android/tri.png"
+            "/src/assets/img/android/ajout.jpg",
+            "/src/assets/img/android/liste.jpg",
+            "/src/assets/img/android/tri.jpg"
         ],
         "paragraphes":[
             "Création d'une application Android Studio pour stocker des liens vers des sites de lecture.",

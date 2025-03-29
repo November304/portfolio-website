@@ -7,7 +7,7 @@ interface Props {
     title: string;
     images: string[];
     paragraphes: string[];
-    githubLink?: string;
+    githubLink: string | null;
 }
 
 const { title, images, paragraphes, githubLink } = Astro.props;
@@ -33,7 +33,7 @@ const { title, images, paragraphes, githubLink } = Astro.props;
 
         <div>
             {paragraphes.map((para) => (
-                <p>{para}</p>
+                <p style="text-align: justify; margin-bottom: 1em;">{para}</p>
             ))}
             { githubLink ? (
                 <div>
