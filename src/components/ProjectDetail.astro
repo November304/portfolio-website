@@ -3,6 +3,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
+import { Image } from 'astro:assets';
 
 interface Props {
     title: string;
@@ -12,6 +13,9 @@ interface Props {
     technologies?: { name: string; iconUrl: string; color: string }[];
     tags?: string[];
 }
+
+const imagesGlob = import.meta.glob<{default : ImageMetadata}>('/src/assets/img/**/*.{png,jpg,jpeg,webp}', { eager: true });
+const videosGlob = import.meta.glob<{default : string}>('/src/assets/img/**/*.{mp4,webm}', { eager: true });
 
 const { title, images, paragraphes, githubLink, technologies = [], tags = [] } = Astro.props;
 ---
@@ -32,7 +36,7 @@ const { title, images, paragraphes, githubLink, technologies = [], tags = [] } =
             <div class="tech-container">
                 {technologies.map((tech) => (
                     <div class="tech-item" style={`color: ${tech.color}`}>
-                        <img src={tech.iconUrl} alt={tech.name} class="tech-icon" />
+                        <Image src={tech.iconUrl} alt={tech.name} class="tech-icon" width={32} height={32} loading="eager" />
                         <span class="tech-name">{tech.name}</span>
                     </div>
                 ))}
@@ -51,21 +55,21 @@ const { title, images, paragraphes, githubLink, technologies = [], tags = [] } =
                                 muted
                                 loop
                                 class="slide-image"
-                                data-lightbox="true"
                                 data-index={index}
                                 data-type="video"
                             >
-                                <source src={img} type="video/webm" />
+                                <source src={videosGlob[img].default} type="video/webm" />
                                 Votre navigateur ne supporte pas cette vidéo.
                             </video>
                         ) : (
-                            <img
-                                src={img}
+                            <Image
+                                src={imagesGlob[img].default}
                                 alt={`${title} - capture d'écran ${index + 1}`}
                                 class="slide-image"
                                 data-lightbox="true"
                                 data-index={index}
                                 data-type="image"
+                                loading="eager"
                             />
                         )}
                     </div>
@@ -107,7 +111,7 @@ const { title, images, paragraphes, githubLink, technologies = [], tags = [] } =
     <div id="lightbox-modal" class="lightbox-modal">
         <span class="close-lightbox">&times;</span>
         <div id="lightbox-media-container">
-            <img class="lightbox-content" id="lightbox-img" style="display: none;">
+            <img class="lightbox-content" id="lightbox-img" style="display: none;" alt="Erreur de chargement" />
             <video class="lightbox-content" id="lightbox-video" style="display: none;" autoplay muted loop>
                 <source id="lightbox-video-source" src="">
                 Votre navigateur ne supporte pas cette vidéo.

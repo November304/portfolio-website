@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 interface Technology {
     name: string;
     iconUrl: string;
@@ -19,7 +20,7 @@ const { title,description, link,technologies, tags } = Astro.props;
     <div class="text-sm text-gray-500 mb-4">
         {technologies.map((tech, index) => (
             <span class="inline-flex items-center gap-x-2 rounded-full text-xs dark:text-white text-black py-0.5 px-1 mr-2" style={`background-color: ${tech.color};`}>                
-            <img src={tech.iconUrl} alt={tech.name} class="w-5 h-5" />
+            <Image src={tech.iconUrl} alt={tech.name} class="w-5 h-5" width={32} height={32}/>
                 <span class="mr-2">{tech.name}</span>
             </span>
         ))}

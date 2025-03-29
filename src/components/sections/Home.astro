@@ -7,7 +7,7 @@ import { Image } from 'astro:assets';
         <h1 class="text-5xl font-bold mb-4">Nathan Pagnucco</h1>
         <p class="text-xl text-gray-600">Développeur | Game Designer</p>
         <div class="absolute inset-0 z-[-1]">
-            <Image src={cityImage} alt="City background" class="w-full h-full object-cover opacity-20" />
+            <Image src={cityImage} alt="City background" class="w-full h-full object-cover opacity-20" loading="eager"/>
         </div>
         <div class="mt-8">
             <a href="#projects" class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition">
