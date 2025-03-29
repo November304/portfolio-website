@@ -8,5 +8,6 @@ export default defineConfig({
       plugins: [tailwindcss()],
     },
     site:  'https://november304.github.io',
-    base: '/portfolio-website/'
+    base: '/portfolio-website/',
+    output: "static"
   });
