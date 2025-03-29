@@ -1,0 +1,57 @@
+---
+interface Props {
+    name: string;
+    iconUrl?: string | null;
+    image?: string | null;
+    category: string;
+    experienceLevel: number;
+}
+import { Image } from "astro:assets";
+import type { ImageMetadata } from 'astro';
+
+const { name, iconUrl, image, category, experienceLevel } = Astro.props;
+const icons = import.meta.glob<{ default: ImageMetadata }>('/src/assets/icons/*.{jpeg,jpg,png,gif}');
+
+---
+<div
+    class="tool-card bg-white p-6 rounded-lg shadow-md text-center"
+    data-category={category}
+    data-experience={experienceLevel}
+>
+    {
+        iconUrl ? (
+            <Image
+                src={iconUrl}
+                alt={name}
+                width={64}
+                height={64}
+                class="w-16 h-16 mx-auto mb-4"
+            />
+        )  : image ? (
+            <Image
+                src={icons[image]()}
+                alt={name}
+                width={64}
+                height={64}
+                class="w-16 h-16 mx-auto mb-4"
+            />
+        )  : (
+            <div class="w-16 h-16 mx-auto mb-4 bg-gray-200 flex items-center justify-center rounded">
+                <span class="text-gray-500">N/A</span>
+            </div>
+        )
+    }
+    <h3 class="text-xl font-semibold">{name}</h3>
+    <div class="flex justify-center mt-2">
+        {
+            [...Array(4)].map((_, index) => (
+                <span
+                    class={`text-2xl ${index < experienceLevel ? "text-yellow-500" : "text-gray-300"}`}
+                >
+                    ★
+                </span>
+            ))
+        }
+    </div>
+    <p class="text-sm text-gray-500 mt-2">{category}</p>
+</div>

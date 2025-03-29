@@ -1,0 +1,494 @@
+---
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
+
+interface Props {
+    title: string;
+    images: string[];
+    paragraphes: string[];
+    githubLink: string | null;
+    technologies?: { name: string; iconUrl: string; color: string }[];
+    tags?: string[];
+}
+
+const { title, images, paragraphes, githubLink, technologies = [], tags = [] } = Astro.props;
+---
+
+<div class="project-detail">
+    <div class="project-header">
+        <h1 class="project-title">{title}</h1>
+        
+        {tags && tags.length > 0 && (
+            <div class="tags-container">
+                {tags.map((tag) => (
+                    <span class="tag">{tag}</span>
+                ))}
+            </div>
+        )}
+        
+        {technologies && technologies.length > 0 && (
+            <div class="tech-container">
+                {technologies.map((tech) => (
+                    <div class="tech-item" style={`color: ${tech.color}`}>
+                        <img src={tech.iconUrl} alt={tech.name} class="tech-icon" />
+                        <span class="tech-name">{tech.name}</span>
+                    </div>
+                ))}
+            </div>
+        )}
+    </div>
+
+    {images && images.length > 0 && (
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                {images.map((img, index) => (
+                    <div class="swiper-slide">
+                        {img.endsWith('.webm') ? (
+                            <video
+                                autoplay
+                                muted
+                                loop
+                                class="slide-image"
+                                data-lightbox="true"
+                                data-index={index}
+                                data-type="video"
+                            >
+                                <source src={img} type="video/webm" />
+                                Votre navigateur ne supporte pas cette vidéo.
+                            </video>
+                        ) : (
+                            <img
+                                src={img}
+                                alt={`${title} - capture d'écran ${index + 1}`}
+                                class="slide-image"
+                                data-lightbox="true"
+                                data-index={index}
+                                data-type="image"
+                            />
+                        )}
+                    </div>
+                ))}
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    )}
+
+    <div class="project-description">
+        {paragraphes.map((para) => (
+            <p class="paragraph">{para}</p>
+        ))}
+    </div>
+
+    {githubLink && (
+        <div class="github-link-container">
+            <a href={githubLink} target="_blank" rel="noopener noreferrer" class="github-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                Voir le dépôt GitHub
+            </a>
+        </div>
+    )}
+
+    <div class="back-link-container">
+        <a href="/" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Retour aux projets
+        </a>
+    </div>
+
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="close-lightbox">&times;</span>
+        <div id="lightbox-media-container">
+            <img class="lightbox-content" id="lightbox-img" style="display: none;">
+            <video class="lightbox-content" id="lightbox-video" style="display: none;" autoplay muted loop>
+                <source id="lightbox-video-source" src="">
+                Votre navigateur ne supporte pas cette vidéo.
+            </video>
+        </div>
+        <div class="lightbox-nav">
+            <button id="prev-btn" class="lightbox-btn">&#10094;</button>
+            <button id="next-btn" class="lightbox-btn">&#10095;</button>
+        </div>
+        <div class="lightbox-caption"></div>
+    </div>
+</div>
+
+<style>
+    .project-detail {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .project-header {
+        margin-bottom: 2rem;
+    }
+
+    .project-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #333;
+    }
+
+    .tags-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .tag {
+        background-color: #f3f4f6;
+        color: #4b5563;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+    }
+
+    .tech-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .tech-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .tech-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .tech-name {
+        font-weight: 500;
+    }
+
+    .swiper {
+        --swiper-theme-color: #4b5563;
+        --swiper-navigation-size: 24px;
+        height: 400px;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        margin-bottom: 2.5rem;
+    }
+
+    .slide-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-color: #f9fafb;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .slide-image:hover {
+        transform: scale(1.02);
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: var(--swiper-theme-color);
+    }
+
+    .project-description {
+        margin-bottom: 2rem;
+    }
+
+    .paragraph {
+        text-align: justify;
+        margin-bottom: 1em;
+        line-height: 1.7;
+        color: #4b5563;
+    }
+
+    .github-link-container {
+        margin-top: 2rem;
+    }
+
+    .github-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: #24292e;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 0.375rem;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    .github-link:hover {
+        background-color: #3a3f44;
+    }
+
+    .back-link-container {
+        margin-top: 3rem;
+    }
+
+    .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #3b82f6;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .back-link:hover {
+        color: #1d4ed8;
+    }
+
+    .lightbox-modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        padding-top: 50px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    #lightbox-media-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+
+    .lightbox-content {
+        margin: auto;
+        max-width: 90%;
+        max-height: 80vh;
+        object-fit: contain;
+    }
+
+    .lightbox-caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 40px;
+    }
+
+    .close-lightbox {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .close-lightbox:hover,
+    .close-lightbox:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .lightbox-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-sizing: border-box;
+        transform: translateY(-50%);
+    }
+
+    .lightbox-btn {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .lightbox-btn:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    @media (max-width: 640px) {
+        .project-title {
+            font-size: 2rem;
+        }
+        
+        .swiper {
+            height: 300px;
+        }
+        
+        .tech-container {
+            gap: 0.75rem;
+        }
+
+        .lightbox-content {
+            max-width: 95%;
+        }
+
+        .lightbox-btn {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+        }
+    }
+</style>
+
+<script>
+    import Swiper from 'swiper';
+    import { Navigation, Pagination, EffectFade, Autoplay } from 'swiper/modules';
+    
+    const swiper = new Swiper('.swiper', {
+        modules: [Navigation, Pagination, EffectFade, Autoplay],
+        loop: true,
+        effect: 'slide',
+        speed: 800,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const media = document.querySelectorAll('[data-lightbox="true"]');
+        const modal = document.getElementById('lightbox-modal')!;
+        const modalImg = document.getElementById('lightbox-img') as HTMLImageElement;
+        const modalVideo = document.getElementById('lightbox-video') as HTMLVideoElement;
+        const videoSource = document.getElementById('lightbox-video-source') as HTMLSourceElement;
+        const caption = document.querySelector('.lightbox-caption')!;
+        const close = document.querySelector('.close-lightbox')!;
+        const prevBtn = document.getElementById('prev-btn')!;
+        const nextBtn = document.getElementById('next-btn')!;
+        
+        let currentIndex = 0;
+        const mediaData = Array.from(media).map(item => ({
+
+            src: item.tagName === 'VIDEO' ? item.querySelector('source')?.src || '' : (item as HTMLImageElement).src,
+            type: item.getAttribute('data-type'),
+            alt: (item as HTMLImageElement).alt || (() => {
+                const slide = item.closest('.swiper-slide');
+                const altElem = slide ? slide.querySelector('[alt]') : null;
+                return altElem ? altElem.getAttribute('alt') || 'Media' : 'Media';
+            })()
+        }));
+        
+        media.forEach((item) => {
+            item.addEventListener('click', function(this: HTMLElement) {
+                modal.style.display = "block";
+                currentIndex = parseInt(this.getAttribute('data-index') || "0");
+                updateLightbox();
+            });
+        });
+        
+        close.addEventListener('click', () => {
+            modal.style.display = "none";
+            modalVideo.pause();
+        });
+        
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+                modalVideo.pause();
+            }
+        });
+        
+        document.addEventListener('keydown', (e) => {
+            if (modal.style.display === "block") {
+                if (e.key === "ArrowLeft") {
+                    showPrevMedia();
+                } else if (e.key === "ArrowRight") {
+                    showNextMedia();
+                } else if (e.key === "Escape") {
+                    modal.style.display = "none";
+                    modalVideo.pause();
+                }
+            }
+        });
+        
+        prevBtn.addEventListener('click', showPrevMedia);
+        nextBtn.addEventListener('click', showNextMedia);
+        
+        function showPrevMedia() {
+            currentIndex = (currentIndex - 1 + mediaData.length) % mediaData.length;
+            updateLightbox();
+        }
+        
+        function showNextMedia() {
+            currentIndex = (currentIndex + 1) % mediaData.length;
+            updateLightbox();
+        }
+        
+        function updateLightbox() {
+            const currentMedia = mediaData[currentIndex];
+            
+            if (currentMedia.type === 'video') {
+                modalImg.style.display = 'none';
+                videoSource.src = currentMedia.src;
+                modalVideo.load();
+                modalVideo.style.display = 'block';
+                modalVideo.play();
+            } else {
+                modalVideo.style.display = 'none';
+                modalVideo.pause();
+                modalImg.src = currentMedia.src;
+                modalImg.style.display = 'block';
+            }
+            
+            caption.innerHTML = currentMedia.alt;
+        }
+    });
+</script>

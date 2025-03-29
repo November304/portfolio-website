@@ -1,0 +1,43 @@
+---
+import imagePP from '../../assets/img/mecrandom.jpg';
+import { Image } from 'astro:assets';
+---
+<section id="about" class="bg-gray-100 py-20">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">À Propos de Moi</h2>
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+            <div class="flex flex-col items-center">
+                <Image 
+                    src={imagePP} 
+                    alt="Profil de Nathan Pagnucco" 
+                    class="rounded-lg shadow-md w-48 h-auto sm:w-64 md:w-72"
+                />
+                <p class="mt-4 font-semibold">Email :</p>
+                <a 
+                    href="mailto:nathan.pagnucco@gmail.com" 
+                    class="text-blue-500 hover:underline"
+                >
+                    nathan.pagnucco@gmail.com
+                </a>
+                <a 
+                    href="/CVNP.pdf" 
+                    download 
+                    class="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                >
+                    Télécharger mon CV
+                </a>
+            </div>
+            <div>
+                <p class="text-gray-700 mb-4 text-justify">
+                    Actuellement en troisième année de BUT Informatique en alternance, je me spécialise dans le développement logiciel. Mon parcours en alternance me permet d'allier théorie et pratique professionnelle, avec des missions concrètes en DevOps et en optimisation de code. J'ai notamment travaillé sur la mise en place d'une plateforme de déploiement automatisé. 
+                </p>
+                <p class="text-gray-700 mb-4 text-justify">
+                    Passionné par le développement de jeux vidéo, je crée régulièrement des prototypes et des mécaniques de jeu avec Unity. J'apprécie particulièrement l'aspect créatif du game design et les défis techniques liés à l'optimisation des performances, tout en explorant la création d'environnements 3D ou 2D interactifs. 
+                </p>
+                <p class="text-gray-700 mb-4 text-justify">
+                    Curieux d'approfondir les aspects graphiques du développement, j'expérimente actuellement la programmation de shaders en GLSL (OpenGL) et HLSL (DirectX). Je m'intéresse aux rendus visuels avancés ainsi qu'aux effets post-processing. 
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
