@@ -23,7 +23,8 @@
             "Le développement du jeu est actuellement en pause, la quantité de bugs et de problèmes sur le jeu et le code du jeu étaient très importants. Je compte reprendre le jeu dans le futur, peut-être en recommençant et en appliquant tout ce que j'ai appris sur le développement de jeux multijoueurs."
         
         ],
-        "githubLink": "https://github.com/CuboidCorp/NoNeedForRogues"
+        "githubLink": "https://github.com/CuboidCorp/NoNeedForRogues",
+        "date": "2024-02-29"
     },
     {
         "title": "Auto QCM",
@@ -47,7 +48,8 @@
             "De plus, Auto QCM se connecte aisément avec des plateformes telles que Moodle et AMC, assurant une interopérabilité efficace dans les environnements pédagogiques.",
             "Il fallait également créer un pitch commercial pour le projet, ce qui m'a permis de développer mes compétences en montage vidéo et en présentation."
         ],
-        "githubLink":"https://github.com/AlexiFon/AUTO-QCM-R5.08-Qdev"
+        "githubLink":"https://github.com/AlexiFon/AUTO-QCM-R5.08-Qdev",
+        "date": "2024-09-03"
     },
     {
         "title": "Site Web locur4iot",
@@ -74,7 +76,8 @@
             "Réalisation d'un site web interne en PHP pour la visualisation des données de capteurs de distance en intérieur pour les chercheurs de l'équipe Locura4iot. ",
             "Dans ce projet de l'IUT, j'ai du réaliser en équipe un site web qui permettait d'afficher des données émises avec le protocole MQTT par différents capteurs en se connectant au courtier mqtt du testbed présent à l'IUT. Il nous a fallu récupérer les données, les stocker en base de données, les afficher sur une page web et les mettre à jour en temps réel."
         ],
-        "githubLink":null
+        "githubLink":null,
+        "date": "2024-01-09"
     },
     {
         "title": "Countdown Crew",
@@ -102,7 +105,8 @@
             "Le jeu est inspiré du jeu 'Keep Talking and Nobody Explodes', mais j'ai voulu refaire ma propre version où j'introduis de l'aléatoire dans le manuel ainsi que des modules de mon invention.",
             "Je suis actuellement en train de travailler sur ce jeu, j'ai l'intention de continuer de travailler dessus jusqu'à ce que je sois satisfait de son état, peut-être vers une release sur itch.io."
         ],
-        "githubLink":"https://github.com/CuboidCorp/bomb-game"
+        "githubLink":"https://github.com/CuboidCorp/bomb-game",
+        "date": "2025-03-29"
     },
     {
         "title": "Tests de Shaders",
@@ -128,7 +132,8 @@
             "J'ai utilisé le langage GLSL pour créer ces shaders, et j'ai pu apprendre à écrire du code de manière différente, à penser en termes de pixels et de fragments.",
             "J'ai hâte de tester les applications des shaders dans d'autres projets comme sur Unity, ou de tester d'autres formules pour voir ce que je peux faire. "
         ],
-        "githubLink":null
+        "githubLink":null,
+        "date": "2025-01-05"
     },
     {
         "title": "Flappy Bird",
@@ -155,7 +160,8 @@
             "Le cours était principalement axé sur la découverte d'Unity, qui m'était déjà familier, mais j'ai pu aller plus loin lors de la création de ce jeu.",
             "J'ai pu mettre en place des animations, et des effets de parralax supplémentaires pour améliorer le rendu du jeu."
         ],
-        "githubLink":null
+        "githubLink":null,
+        "date": "2025-01-06"
     },
     {
         "title": "Mise en place d'une machine virtuelle",
@@ -174,7 +180,8 @@
             "Mise en place d'une machine virtuelle Ubuntu avec la création d'utilisateurs avec des droits différents.",
             "Le projet a été réalisé en équipe, et nous avons du mettre en place un système de gestion des utilisateurs et de leurs droits sur la machine virtuelle."
         ],
-        "githubLink":null 
+        "githubLink":null ,
+        "date": "2023-03-12"
     },
     {
         "title": "Création d'un pipeline CI/CD",
@@ -204,7 +211,8 @@
             "Le projet était de créer une pipeline CI/CD sur un projet existant, sur ma pipeline j'ai décidé d'executer des tests, vérifier si le projet compile, et si tout fonctionne de deployer sur un serveur avec un conteneur docker.",
             "Pour la réalisation de ce pipeline, j'ai separé le projet en 3 environnements : développement, production et branche de fonctionnalité : Lors d'un commit sur la branche principale on met en place l'environement, on vérifie si le projet compile, si les tests fonctionnent et si tout marche on déploie l'application avec un docker et on crée une release. Sur la branche de dev on fait la même chose en deployant à un endroit différent et sans créer de release. Sur une branche de fonctionnalité, on ne deploie pas et on ne crée pas de release."
         ],
-        "githubLink":"https://gitlab.iut-blagnac.fr/npagnucco/automatisation-projet-pagnucco/"
+        "githubLink":"https://gitlab.iut-blagnac.fr/npagnucco/automatisation-projet-pagnucco/",
+        "date": "2024-11-22"
     },
     {
         "title": "Création d'un site web Angular",
@@ -227,7 +235,8 @@
         "paragraphes": [
             "Création d'un site web Angular pour gérer des exercices de routines sportives, le projet était de créer un site web simple en angular avec une base de données très simple avec jsonServer"
         ],
-        "githubLink":"https://gitlab.iut-blagnac.fr/npagnucco/automatisation-projet-pagnucco/"
+        "githubLink":"https://gitlab.iut-blagnac.fr/npagnucco/automatisation-projet-pagnucco/",
+        "date": "2023-11-22"
     },
     {
         "title": "Création de tests BDD",
@@ -251,7 +260,8 @@
             "Le projet était de créer des tests pour valider les User Stories du projet AUTO QCM, j'ai donc du créer des tests en équipe et les implémenter avec Cucumber avec une extension django django-behave.",
             "J'ai pu apprendre à écrire des tests pour le Behaviour Driver Developpement (BDD), et à utiliser Cucumber pour les implémenter, même si dans le cas précis de ce projet il s'agissait de BDD rétroactif."
         ],
-        "githubLink":"https://github.com/AlexiFon/AUTO-QCM-R5.08-Qdev"
+        "githubLink":"https://github.com/AlexiFon/AUTO-QCM-R5.08-Qdev",
+        "date": "2025-01-15"
     },
     {
         "title": "Application de stockage de lecture",
@@ -275,7 +285,8 @@
             "Ma première application Android, elle permet de stocker les liens vers des sites pour la lecture typiquement (Livres, Mangas, Webtoons), les noter de manière personnelle, et vérifier si le chapitre ou la suite de l'histoire est disponible.",
             "Il y a également des options de tri selon différents critères comme la date de dernière lecture, le nombre d'étoiles, le nombre de chapites lus."
         ],
-        "githubLink":null
+        "githubLink":null,
+        "date": "2022-11-13"
     },
     {
         "title": "Projet gestion de plats et menus",
@@ -300,7 +311,8 @@
             "L'interface permet d'éditer les menus, d'ajouter ou supprimer des plats, et de calculer les calories automatiquement.",
             "J'ai intégré des notifications, un thème sombre/claire et des graphiques interactifs pour visualiser la répartition des calories."
         ],
-        "githubLink":"https://github.com/November304/projetspring"
+        "githubLink":"https://github.com/November304/projetspring",
+        "date": "2025-02-05"
     },
     {
         "title": "Maintenance applicative",
@@ -320,7 +332,8 @@
             "Le projet était de réaliser des tests unitaires et de fonctionnement sur une application existante, j'ai eu à créer des tests sur un formulaire.",
             "J'ai pu apprendre à utiliser Pinia pour la gestion d'état des tests et à créer des tests pour vue avec Karma."
         ],
-        "githubLink":null
+        "githubLink":null,
+        "date": "2025-02-08"
     },
     {
         "title": "Création d'un site web pour salle de sport",
@@ -349,6 +362,7 @@
             "Création d'un site web avec un backend en PHP/Symfony et une base de données MariaDB, une API REST et un frontend en Angular.",
             "Le projet était de créer un site web pour une salle de sport en équipe, je me suis chargé de la création de l'API REST ainsi que sa sécurisation, ainsi que de la création de données et l'affichage de statistiques pour les resposables de la salle."
         ],
-        "githubLink":"https://github.com/November304/sae-S6-coach"
+        "githubLink":"https://github.com/November304/sae-S6-coach",
+        "date": "2025-03-11"
     }
 ]
