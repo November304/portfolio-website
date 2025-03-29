@@ -2,61 +2,261 @@
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 
 interface Props {
     title: string;
     images: string[];
     paragraphes: string[];
     githubLink: string | null;
+    technologies?: { name: string; iconUrl: string; color: string }[];
+    tags?: string[];
 }
 
-const { title, images, paragraphes, githubLink } = Astro.props;
-
+const { title, images, paragraphes, githubLink, technologies, tags } = Astro.props;
 ---
 
-<html>
-    <body>
-        <h1>{title}</h1>
-
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                {images.map((img) => (
-                    <div class="swiper-slide">
-                        <img src={img} alt={title + " image"} />
+<div class="project-detail">
+    <div class="project-header">
+        <h1 class="project-title">{title}</h1>
+        
+        {tags && tags.length > 0 && (
+            <div class="tags-container">
+                {tags.map((tag) => (
+                    <span class="tag">{tag}</span>
+                ))}
+            </div>
+        )}
+        
+        {technologies && technologies.length > 0 && (
+            <div class="tech-container">
+                {technologies.map((tech) => (
+                    <div class="tech-item" style={`color: ${tech.color}`}>
+                        <img src={tech.iconUrl} alt={tech.name} class="tech-icon" />
+                        <span class="tech-name">{tech.name}</span>
                     </div>
                 ))}
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-pagination"></div>
-        </div>
+        )}
+    </div>
 
-        <div>
-            {paragraphes.map((para) => (
-                <p style="text-align: justify; margin-bottom: 1em;">{para}</p>
-            ))}
-            { githubLink ? (
-                <div>
-                    <a href={githubLink} target="_blank" rel="noopener noreferrer">Voir le dépôt GitHub</a>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            {images.map((img) => (
+                <div class="swiper-slide">
+                    <img src={img} alt={`${title} - capture d'écran`} class="slide-image" />
                 </div>
-            ) : null
-            }
+            ))}
         </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+    </div>
 
-        <script>
-            import Swiper from 'swiper';
-            import { Navigation, Pagination } from 'swiper/modules';
-            const swiper = new Swiper('.swiper', {
-                modules: [Navigation, Pagination],
-                loop: true,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                },
-            });
-        </script>
-    </body>
-</html>
+    <div class="project-description">
+        {paragraphes.map((para) => (
+            <p class="paragraph">{para}</p>
+        ))}
+    </div>
+
+    {githubLink && (
+        <div class="github-link-container">
+            <a href={githubLink} target="_blank" rel="noopener noreferrer" class="github-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                Voir le dépôt GitHub
+            </a>
+        </div>
+    )}
+
+    <div class="back-link-container">
+        <a href="/#projects" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Retour aux projets
+        </a>
+    </div>
+</div>
+
+<style>
+    .project-detail {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .project-header {
+        margin-bottom: 2rem;
+    }
+
+    .project-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #333;
+    }
+
+    .tags-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .tag {
+        background-color: #f3f4f6;
+        color: #4b5563;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+    }
+
+    .tech-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .tech-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .tech-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .tech-name {
+        font-weight: 500;
+    }
+
+    .swiper {
+        --swiper-theme-color: #4b5563;
+        --swiper-navigation-size: 24px;
+        height: 400px;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        margin-bottom: 2.5rem;
+    }
+
+    .slide-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: var(--swiper-theme-color);
+    }
+
+    .project-description {
+        margin-bottom: 2rem;
+    }
+
+    .paragraph {
+        text-align: justify;
+        margin-bottom: 1em;
+        line-height: 1.7;
+        color: #4b5563;
+    }
+
+    .github-link-container {
+        margin-top: 2rem;
+    }
+
+    .github-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: #24292e;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 0.375rem;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    .github-link:hover {
+        background-color: #3a3f44;
+    }
+
+    .back-link-container {
+        margin-top: 3rem;
+    }
+
+    .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #3b82f6;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .back-link:hover {
+        color: #1d4ed8;
+    }
+
+    @media (max-width: 640px) {
+        .project-title {
+            font-size: 2rem;
+        }
+        
+        .swiper {
+            height: 300px;
+        }
+        
+        .tech-container {
+            gap: 0.75rem;
+        }
+    }
+</style>
+
+<script>
+    import Swiper from 'swiper';
+    import { Navigation, Pagination, EffectFade, Autoplay } from 'swiper/modules';
+    
+    const swiper = new Swiper('.swiper', {
+        modules: [Navigation, Pagination, EffectFade, Autoplay],
+        loop: true,
+        effect: 'slide',
+        speed: 800,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+    });
+</script>

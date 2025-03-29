@@ -95,7 +95,6 @@
         "images":[
             "/src/assets/img/bombgame/bomb.png",
             "/src/assets/img/bombgame/level.png",
-            "/src/assets/img/bombgame/logo.png",
             "/src/assets/img/bombgame/manuel.png"
         ],
         "paragraphes": [
