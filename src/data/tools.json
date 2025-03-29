@@ -194,5 +194,12 @@
         "image" : "/src/assets/icons/icon_davinciresolve.png",
         "category": "Logiciel",
         "experienceLevel": 2
+    },
+    {
+        "name" : "GLSL",
+        "iconUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opengl/opengl-original.svg",
+        "image" : null,
+        "category" : "Langage",
+        "experienceLevel" : 1
     }
 ]

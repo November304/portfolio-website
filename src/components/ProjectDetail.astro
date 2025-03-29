@@ -1,0 +1,62 @@
+---
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+interface Props {
+    title: string;
+    images: string[];
+    paragraphes: string[];
+    githubLink?: string;
+}
+
+const { title, images, paragraphes, githubLink } = Astro.props;
+
+---
+
+<html>
+    <body>
+        <h1>{title}</h1>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                {images.map((img) => (
+                    <div class="swiper-slide">
+                        <img src={img} alt={title + " image"} />
+                    </div>
+                ))}
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div>
+            {paragraphes.map((para) => (
+                <p>{para}</p>
+            ))}
+            { githubLink ? (
+                <div>
+                    <a href={githubLink} target="_blank" rel="noopener noreferrer">Voir le dépôt GitHub</a>
+                </div>
+            ) : null
+            }
+        </div>
+
+        <script>
+            import Swiper from 'swiper';
+            import { Navigation, Pagination } from 'swiper/modules';
+            const swiper = new Swiper('.swiper', {
+                modules: [Navigation, Pagination],
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+            });
+        </script>
+    </body>
+</html>

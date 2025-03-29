@@ -1,0 +1,40 @@
+---
+import "../../styles/global.css";
+import Header from '../../components/Header.astro';
+import ProjectDetail from "../../components/ProjectDetail.astro";
+import projects from '../../data/projects.json';
+
+export async function getStaticPaths() {
+    return projects.map(project => ({
+        params: { slug: project.slug }
+    }));
+}
+
+const { slug } = Astro.params;
+
+const project = projects.find(item => item.slug === slug);
+
+
+---
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Site Portfolio</title>
+</head>
+<body class="bg-white text-gray-900">
+    <Header />
+    {
+        project ? (
+            <main class="container mx-auto px-4 py-8">
+                <ProjectDetail title={project.title} images={project.images} paragraphes={project.paragraphes} />
+            </main>
+        ) : (
+            <main class="container mx-auto px-4 py-8">
+                <h1 class="text-4xl font-bold text-center">Projet non trouvé</h1>
+                <p class="text-center">Désolé, le projet que vous recherchez n'existe pas.</p>
+            </main>
+        )
+    }
+</body>
+</html>
