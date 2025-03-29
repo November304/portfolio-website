@@ -40,40 +40,42 @@ const { title, images, paragraphes, githubLink, technologies = [], tags = [] } =
         )}
     </div>
 
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            {images.map((img, index) => (
-                <div class="swiper-slide">
-                    {img.endsWith('.webm') ? (
-                        <video
-                            autoplay
-                            muted
-                            loop
-                            class="slide-image"
-                            data-lightbox="true"
-                            data-index={index}
-                            data-type="video"
-                        >
-                            <source src={img} type="video/webm" />
-                            Votre navigateur ne supporte pas cette vidéo.
-                        </video>
-                    ) : (
-                        <img
-                            src={img}
-                            alt={`${title} - capture d'écran ${index + 1}`}
-                            class="slide-image"
-                            data-lightbox="true"
-                            data-index={index}
-                            data-type="image"
-                        />
-                    )}
-                </div>
-            ))}
+    {images && images.length > 0 && (
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                {images.map((img, index) => (
+                    <div class="swiper-slide">
+                        {img.endsWith('.webm') ? (
+                            <video
+                                autoplay
+                                muted
+                                loop
+                                class="slide-image"
+                                data-lightbox="true"
+                                data-index={index}
+                                data-type="video"
+                            >
+                                <source src={img} type="video/webm" />
+                                Votre navigateur ne supporte pas cette vidéo.
+                            </video>
+                        ) : (
+                            <img
+                                src={img}
+                                alt={`${title} - capture d'écran ${index + 1}`}
+                                class="slide-image"
+                                data-lightbox="true"
+                                data-index={index}
+                                data-type="image"
+                            />
+                        )}
+                    </div>
+                ))}
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
-    </div>
+    )}
 
     <div class="project-description">
         {paragraphes.map((para) => (
@@ -93,7 +95,7 @@ const { title, images, paragraphes, githubLink, technologies = [], tags = [] } =
     )}
 
     <div class="back-link-container">
-        <a href="/projets" class="back-link">
+        <a href="/" class="back-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="19" y1="12" x2="5" y2="12"></line>
                 <polyline points="12 19 5 12 12 5"></polyline>
