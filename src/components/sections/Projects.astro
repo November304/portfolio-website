@@ -5,6 +5,7 @@ import projects from "../../data/projects.json" assert { type: "json" };
 <section id="projects" class="py-20">
     <div class="container mx-auto px-4">
         <h2 class="text-4xl font-bold text-center mb-12">Mes Projets</h2>
+        <p class="text-center text-lg mb-8">Voici quelques projets sur lesquels j'ai travaillé sur mon temps libre, ou lors de projets durant mes formations.</p>
         <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {projects.map((project) => (
                 <ProjectCard 
