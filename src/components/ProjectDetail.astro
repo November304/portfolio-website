@@ -13,7 +13,7 @@ interface Props {
     tags?: string[];
 }
 
-const { title, images, paragraphes, githubLink, technologies, tags } = Astro.props;
+const { title, images, paragraphes, githubLink, technologies = [], tags = [] } = Astro.props;
 ---
 
 <div class="project-detail">
@@ -42,9 +42,31 @@ const { title, images, paragraphes, githubLink, technologies, tags } = Astro.pro
 
     <div class="swiper">
         <div class="swiper-wrapper">
-            {images.map((img) => (
+            {images.map((img, index) => (
                 <div class="swiper-slide">
-                    <img src={img} alt={`${title} - capture d'écran`} class="slide-image" />
+                    {img.endsWith('.webm') ? (
+                        <video
+                            autoplay
+                            muted
+                            loop
+                            class="slide-image"
+                            data-lightbox="true"
+                            data-index={index}
+                            data-type="video"
+                        >
+                            <source src={img} type="video/webm" />
+                            Votre navigateur ne supporte pas cette vidéo.
+                        </video>
+                    ) : (
+                        <img
+                            src={img}
+                            alt={`${title} - capture d'écran ${index + 1}`}
+                            class="slide-image"
+                            data-lightbox="true"
+                            data-index={index}
+                            data-type="image"
+                        />
+                    )}
                 </div>
             ))}
         </div>
@@ -71,13 +93,29 @@ const { title, images, paragraphes, githubLink, technologies, tags } = Astro.pro
     )}
 
     <div class="back-link-container">
-        <a href="/#projects" class="back-link">
+        <a href="/projets" class="back-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="19" y1="12" x2="5" y2="12"></line>
                 <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
             Retour aux projets
         </a>
+    </div>
+
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="close-lightbox">&times;</span>
+        <div id="lightbox-media-container">
+            <img class="lightbox-content" id="lightbox-img" style="display: none;">
+            <video class="lightbox-content" id="lightbox-video" style="display: none;" autoplay muted loop>
+                <source id="lightbox-video-source" src="">
+                Votre navigateur ne supporte pas cette vidéo.
+            </video>
+        </div>
+        <div class="lightbox-nav">
+            <button id="prev-btn" class="lightbox-btn">&#10094;</button>
+            <button id="next-btn" class="lightbox-btn">&#10095;</button>
+        </div>
+        <div class="lightbox-caption"></div>
     </div>
 </div>
 
@@ -150,7 +188,14 @@ const { title, images, paragraphes, githubLink, technologies, tags } = Astro.pro
     .slide-image {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        background-color: #f9fafb;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .slide-image:hover {
+        transform: scale(1.02);
     }
 
     .swiper-button-next,
@@ -222,6 +267,92 @@ const { title, images, paragraphes, githubLink, technologies, tags } = Astro.pro
         color: #1d4ed8;
     }
 
+    .lightbox-modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        padding-top: 50px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    #lightbox-media-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+
+    .lightbox-content {
+        margin: auto;
+        max-width: 90%;
+        max-height: 80vh;
+        object-fit: contain;
+    }
+
+    .lightbox-caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 40px;
+    }
+
+    .close-lightbox {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .close-lightbox:hover,
+    .close-lightbox:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .lightbox-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-sizing: border-box;
+        transform: translateY(-50%);
+    }
+
+    .lightbox-btn {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .lightbox-btn:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
     @media (max-width: 640px) {
         .project-title {
             font-size: 2rem;
@@ -233,6 +364,16 @@ const { title, images, paragraphes, githubLink, technologies, tags } = Astro.pro
         
         .tech-container {
             gap: 0.75rem;
+        }
+
+        .lightbox-content {
+            max-width: 95%;
+        }
+
+        .lightbox-btn {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
         }
     }
 </style>
@@ -258,5 +399,94 @@ const { title, images, paragraphes, githubLink, technologies, tags } = Astro.pro
             el: ".swiper-pagination",
             clickable: true
         },
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const media = document.querySelectorAll('[data-lightbox="true"]');
+        const modal = document.getElementById('lightbox-modal')!;
+        const modalImg = document.getElementById('lightbox-img') as HTMLImageElement;
+        const modalVideo = document.getElementById('lightbox-video') as HTMLVideoElement;
+        const videoSource = document.getElementById('lightbox-video-source') as HTMLSourceElement;
+        const caption = document.querySelector('.lightbox-caption')!;
+        const close = document.querySelector('.close-lightbox')!;
+        const prevBtn = document.getElementById('prev-btn')!;
+        const nextBtn = document.getElementById('next-btn')!;
+        
+        let currentIndex = 0;
+        const mediaData = Array.from(media).map(item => ({
+
+            src: item.tagName === 'VIDEO' ? item.querySelector('source')?.src || '' : (item as HTMLImageElement).src,
+            type: item.getAttribute('data-type'),
+            alt: (item as HTMLImageElement).alt || (() => {
+                const slide = item.closest('.swiper-slide');
+                const altElem = slide ? slide.querySelector('[alt]') : null;
+                return altElem ? altElem.getAttribute('alt') || 'Media' : 'Media';
+            })()
+        }));
+        
+        media.forEach((item) => {
+            item.addEventListener('click', function(this: HTMLElement) {
+                modal.style.display = "block";
+                currentIndex = parseInt(this.getAttribute('data-index') || "0");
+                updateLightbox();
+            });
+        });
+        
+        close.addEventListener('click', () => {
+            modal.style.display = "none";
+            modalVideo.pause();
+        });
+        
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+                modalVideo.pause();
+            }
+        });
+        
+        document.addEventListener('keydown', (e) => {
+            if (modal.style.display === "block") {
+                if (e.key === "ArrowLeft") {
+                    showPrevMedia();
+                } else if (e.key === "ArrowRight") {
+                    showNextMedia();
+                } else if (e.key === "Escape") {
+                    modal.style.display = "none";
+                    modalVideo.pause();
+                }
+            }
+        });
+        
+        prevBtn.addEventListener('click', showPrevMedia);
+        nextBtn.addEventListener('click', showNextMedia);
+        
+        function showPrevMedia() {
+            currentIndex = (currentIndex - 1 + mediaData.length) % mediaData.length;
+            updateLightbox();
+        }
+        
+        function showNextMedia() {
+            currentIndex = (currentIndex + 1) % mediaData.length;
+            updateLightbox();
+        }
+        
+        function updateLightbox() {
+            const currentMedia = mediaData[currentIndex];
+            
+            if (currentMedia.type === 'video') {
+                modalImg.style.display = 'none';
+                videoSource.src = currentMedia.src;
+                modalVideo.load();
+                modalVideo.style.display = 'block';
+                modalVideo.play();
+            } else {
+                modalVideo.style.display = 'none';
+                modalVideo.pause();
+                modalImg.src = currentMedia.src;
+                modalImg.style.display = 'block';
+            }
+            
+            caption.innerHTML = currentMedia.alt;
+        }
     });
 </script>
