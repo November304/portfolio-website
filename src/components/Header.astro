@@ -1,7 +1,24 @@
 <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 shadow-md">
     <div class="container mx-auto flex justify-between items-center py-4 px-4">
         <a href="/portfolio-website/" class="text-2xl font-bold">Portfolio</a>
-        <ul class="flex space-x-6">
+        
+        <button id="menu-button" class="md:hidden text-gray-800 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
+        
+        <ul class="hidden md:flex space-x-6">
+            <li><a href="/portfolio-website/#home" class="nav-link" data-section="home">Accueil</a></li>
+            <li><a href="/portfolio-website/#about" class="nav-link" data-section="about">À Propos</a></li>
+            <li><a href="/portfolio-website/#journey" class="nav-link" data-section="journey">Parcours</a></li>
+            <li><a href="/portfolio-website/#tools" class="nav-link" data-section="tools">Outils</a></li>
+            <li><a href="/portfolio-website/#projects" class="nav-link" data-section="projects">Projets</a></li>
+        </ul>
+    </div>
+
+    <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white/90 backdrop-blur-md shadow-md">
+        <ul class="flex flex-col items-center space-y-4 px-4 py-4">
             <li><a href="/portfolio-website/#home" class="nav-link" data-section="home">Accueil</a></li>
             <li><a href="/portfolio-website/#about" class="nav-link" data-section="about">À Propos</a></li>
             <li><a href="/portfolio-website/#journey" class="nav-link" data-section="journey">Parcours</a></li>
@@ -10,6 +27,29 @@
         </ul>
     </div>
 </nav>
+
+<script>
+    const menuButton = document.getElementById('menu-button')!;
+    const mobileMenu = document.getElementById('mobile-menu')!;
+    
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (event) => {
+        if (!menuButton.contains(event.target as Node) && !mobileMenu.contains(event.target as Node)) {
+            mobileMenu.classList.add('hidden');
+        }
+    });
+    
+    // Close menu when clicking a link
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+</script>
 
 <script>
     // Script pour gérer la navigation active
