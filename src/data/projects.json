@@ -96,9 +96,11 @@
         "tags": ["Multijoueur", "Projet Perso"],
         "slug": "countdown-crew",
         "images":[
+            "/src/assets/img/bombgame/mainmenu.png",
             "/src/assets/img/bombgame/bomb.png",
-            "/src/assets/img/bombgame/level.png",
-            "/src/assets/img/bombgame/manuel.png"
+            "/src/assets/img/bombgame/levelselect.png",
+            "/src/assets/img/bombgame/manuel.png",
+            "/src/assets/img/bombgame/computer.png"
         ],
         "paragraphes": [
             "Countdown Crew est un jeu multijoueur de coopération, où un joueur doit désamorcer une bombe en communiquant avec un autre joueur qui a le manuel.",
