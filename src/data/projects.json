@@ -366,5 +366,31 @@
         ],
         "githubLink":"https://github.com/November304/sae-S6-coach",
         "date": "2025-03-11"
+    },
+    {
+        "title": "VR Sushi (nom provisoire)",
+        "description": "Jeu de cuisine en VR, où le joueur doit préparer des sushis en suivant les recettes.",
+        "technologies": [
+            {
+                "name": "Unity",
+                "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg",
+                "color": "#222222"
+            },
+            {
+                "name": "C#",
+                "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+                "color": "#68217A"
+            }],
+        "tags": ["VR", "Projet Perso"],
+        "slug": "vr-sushi",
+        "images":[],
+        "paragraphes" : [
+            "Mon premier jeu VR sur Unity, l'idée principale du jeu est de me permettre d'appendre le développement de jeux VR sur Unity, et d'avoir un jeu simple et amusant.",
+            "Le jeu est un jeu de cuisine en VR, où le joueur doit préparer des plats (pour le moment des sushis) en suivant les recettes, le joueur doit couper cetains ingrédients, en cuire d'autres et les assembler. Les plats à effectuer sont chosis par des clients qui arrivent dans le restaurant avec une commande et le joueur doit les servir dans le temps imparti.",
+            "J'ai beaucoup appris sur le développement de jeux VR et principalement l'utilisation de l'XR interaction toolkit sur Unity qui permet de faciliter le développement de jeux VR.",
+            "Le jeu est actuellement en développement, et vu que le principe est assez simple, je vais essayer de passer du temps sur les finitions et les détails du jeu, comme les particules, les sons et essayer de faire une release sur itch.io."
+        ],
+        "githubLink": "https://github.com/CuboidCorp/VrSushi",
+        "date": "2025-04-21"
     }
 ]
