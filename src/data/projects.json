@@ -105,7 +105,8 @@
         "paragraphes": [
             "Countdown Crew est un jeu multijoueur de coopération, où un joueur doit désamorcer une bombe en communiquant avec un autre joueur qui a le manuel.",
             "Le jeu est inspiré du jeu 'Keep Talking and Nobody Explodes', mais j'ai voulu refaire ma propre version où j'introduis de l'aléatoire dans le manuel ainsi que des modules de mon invention.",
-            "Je suis actuellement en train de travailler sur ce jeu, j'ai l'intention de continuer de travailler dessus jusqu'à ce que je sois satisfait de son état, peut-être vers une release sur itch.io."
+            "Actuellement j'ai pu mettre en place la génération et l'affichage de la bombe, ainsi que la création du manuel et de l'interface du jeu. J'ai également implementé un système de traduction, avec la langue anglaise et française pour le moment.",
+            "J'ai effectué une pause sur le développement de ce jeu, car il faut que j'effectue des sessions de tests pour debugger plus efficacement, et essayer de trouver de nouvelles fonctionnalités à ajouter. J'ai l'intention de continuer de travailler dessus jusqu'à ce que je sois satisfait de son état, peut-être vers une release sur itch.io."
         ],
         "githubLink":"https://github.com/CuboidCorp/bomb-game",
         "date": "2025-03-29"

@@ -53,7 +53,7 @@
         "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", 
         "image": null,
         "category": "Logiciel",
-        "experienceLevel": 2
+        "experienceLevel": 3
     },
     { 
         "name": "TypeScript", 
@@ -165,7 +165,7 @@
         "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg", 
         "image": null,
         "category": "Framework",
-        "experienceLevel": 1
+        "experienceLevel": 2
     },
     { 
         "name": "Quasar", 
