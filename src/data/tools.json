@@ -201,5 +201,12 @@
         "image" : null,
         "category" : "Langage",
         "experienceLevel" : 1
+    },
+    {
+        "name" : "Flutter",
+        "iconUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+        "image" : null,
+        "category" : "Langage",
+        "experienceLevel" : 1
     }
 ]
