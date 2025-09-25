@@ -1,0 +1,57 @@
+---
+pubDate: 2025-01-05
+slug: "shaders"
+tags: ["Projet Perso"]
+technologies:
+  - name: "GLSL"
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opengl/opengl-original.svg"
+    color: "#32CD32"
+---
+
+import { Image } from "astro:assets"
+
+# Tests de Shaders
+
+Ce projet regroupe mes **premières expérimentations avec des shaders**, réalisées sur **ShaderToy**.  
+
+## Détails du projet
+
+### Contexte  
+
+L’objectif était de découvrir le langage **GLSL** et d’expérimenter avec le rendu visuel en temps réel. Ces tests m’ont permis de comprendre la logique des shaders et de m’initier à une nouvelle manière de penser la programmation graphique.  
+
+### Ce que j’ai appris  
+- Écrire du code en **GLSL**,  
+- Penser en termes de **pixels et fragments**,  
+- Comprendre les bases des **fractales, effets visuels et animations procédurales**,  
+- Poser les bases pour de futures intégrations dans des moteurs comme **Unity**.  
+
+### Prochaines étapes  
+J’aimerais appliquer ces connaissances dans des projets plus concrets :  
+- Utiliser des shaders dans **Unity** pour enrichir mes jeux,  
+- Expérimenter avec d’autres formules mathématiques pour créer des effets plus complexes.  
+
+---
+
+## Galerie
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+  <video autoplay loop muted playsinline class="rounded-2xl shadow-md">
+    <source src="/src/assets/img/shaders/mandelbrot.webm" type="video/webm" />
+  </video>
+  <video autoplay loop muted playsinline class="rounded-2xl shadow-md">
+    <source src="/src/assets/img/shaders/plasma.webm" type="video/webm" />
+  </video>
+  <video autoplay loop muted playsinline class="rounded-2xl shadow-md">
+    <source src="/src/assets/img/shaders/spiral.webm" type="video/webm" />
+  </video>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+  <video autoplay loop muted playsinline class="rounded-2xl shadow-md">
+    <source src="/src/assets/img/shaders/tutocross.webm" type="video/webm" />
+  </video>
+  <video autoplay loop muted playsinline class="rounded-2xl shadow-md">
+    <source src="/src/assets/img/shaders/waterdrop.webm" type="video/webm" />
+  </video>
+</div>

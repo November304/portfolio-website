@@ -1,0 +1,151 @@
+---
+import "../../styles/global.css";
+import Header from '../../components/Header.astro';
+import Footer from "../../components/Footer.astro";
+
+import cityImage from '../../assets/img/city.jpg';
+import imagePP from '../../assets/img/mecrandom.jpg';
+import { Image } from 'astro:assets';
+import Projects from '../../components/sections/Projects.astro';
+
+import { getCollection } from "astro:content";
+import { getLangFromUrl } from "../../i18n/utils"
+
+const lang = getLangFromUrl(Astro.url)
+const formations = await getCollection("formations");
+const experiences = await getCollection("experiences");
+
+
+---
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Site Portfolio</title>
+</head>
+<body class="bg-white text-gray-900">
+    <Header />
+    
+    <main>
+        
+        <section id="home" class="min-h-screen flex items-center justify-center pt-20">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-4">Nathan Pagnucco</h1>
+                <p class="text-xl text-gray-600">Développeur | DevOps | Game Dev</p>
+                <div class="absolute inset-0 z-[-1]">
+                    <Image src={cityImage} alt="City background" class="w-full h-full object-cover opacity-20" loading="eager"/>
+                </div>
+                <div class="mt-8">
+                    <a href="#projects" class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition">
+                        Découvrir mes Projets
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="bg-gray-100 py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12">À Propos de Moi</h2>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                    <div class="flex flex-col items-center">
+                        <Image 
+                            src={imagePP} 
+                            alt="Profil de Nathan Pagnucco" 
+                            class="rounded-lg shadow-md w-48 h-auto sm:w-64 md:w-72"
+                        />
+                        <p class="mt-4 font-semibold">Email :</p>
+                        <a 
+                            href="mailto:nathan.pagnucco@gmail.com" 
+                            class="text-blue-500 hover:underline"
+                        >
+                            nathan.pagnucco@gmail.com
+                        </a>
+                        <a 
+                            href="/portfolio-website/CVNP.pdf" 
+                            download 
+                            class="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                        >
+                            Télécharger mon CV
+                        </a>
+                    </div>
+                    <div>
+                        <p class="text-gray-700 mb-4 text-justify">
+                            Actuellement en première année de cycle ingénieur à l'ENSEEIHT en alternance à Sopra Steria, je me spécialise dans le développement logiciel. Ce parcours en alternance me permet de combiner théorie académique et pratique professionnelle, notamment à travers des missions en d'optimisation et de maintenance de code.
+                        </p>
+                        <p class="text-gray-700 mb-4 text-justify">
+                            Passionné par le développement de jeux vidéo, je développe régulièrement des prototypes et des mécaniques de jeu avec Unity. J'aime particulièrement concevoir des environnements 2D ou 3D interactifs, travailler sur l'optimisation des performances et relever les défis créatifs du game design.
+                        </p>
+                        <p class="text-gray-700 mb-4 text-justify">
+                            Depuis peu, je découvre également le monde de la réalité virtuelle (VR) et je travaille actuellement sur le développement d'un jeu vidéo en VR.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="journey" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12">Mon Parcours</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-3xl font-semibold mb-8 text-center">
+                            Expériences Professionnelles
+                        </h3>
+                        <div class="relative">
+                            <div class="absolute left-8 top-0 bottom-0 w-1 bg-blue-200"></div>
+                            
+                            <div class="space-y-6">
+                                {experiences.map((exp) => (
+                                    <div class="relative pl-16">
+                                        <div class="absolute left-8 top-6 transform -translate-x-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-white z-10"></div>
+                                        
+                                        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
+                                            <h4 class="text-2xl font-semibold">{exp.title}</h4>
+                                            <p class="text-gray-600 mb-2">
+                                                {exp.company} | {exp.period}
+                                            </p>
+                                            <ul class="list-disc list-inside text-gray-700">
+                                                {exp.actions.map((action) => (
+                                                    <li>{action}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-3xl font-semibold mb-8 text-center">
+                            Formations
+                        </h3>
+                        <div class="relative">
+                            <div class="absolute left-8 top-0 bottom-0 w-1 bg-green-200"></div>
+                            
+                            <div class="space-y-6">
+                                {formations.map((formation) => (
+                                    <div class="relative pl-16">
+                                        <div class="absolute left-8 top-6 transform -translate-x-1/2 w-6 h-6 rounded-full bg-green-500 border-4 border-white z-10"></div>
+                                        
+                                        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
+                                            <h4 class="text-2xl font-semibold">{formation.title}</h4>
+                                            <p class="text-gray-600 mb-2">
+                                                {formation.school} | {formation.period}
+                                            </p>
+                                            <p class="text-gray-700">{formation.description}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <Projects />
+    </main>
+	<Footer />
+</body>
+</html>

@@ -1,3 +1,67 @@
 ---
+pubDate: 2024-02-29
+slug: "no-need-for-rogues"
+tags: ["Multijoueur", "Projet Perso"]
+technologies:
+  - name: "Unity"
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"
+    color: "#222222"
+  - name: "C#"
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+    color: "#68217A"
+---
+
+import { Image } from "astro:assets"
+
+# No Need For Rogues
+
+**No Need For Rogues** est un jeu multijoueur coopératif en 3D développé sous **Unity**, avec chat vocal de proximité et reconnaissance vocale pour lancer des sorts.  
+
+## Détails du projet
+
+### Concept  
+
+L'objectif de ce projet était de créer un jeu coopératif où les joueurs explorent un donjon rempli de pièges pour trouver des trésors. Ils peuvent communiquer entre eux grâce à un chat vocal de proximité, et peuvent lancer des sorts en prononçant certains mots clés.
+
+### Fonctionnalités principales  
+- Chat vocal de proximité avec Vivox
+
+Un chat vocal de proximité permet aux joueurs de parler entre eux de manière immersive, si un joueur est trop loin d'un autre, il ne sera plus attendu par l'autre joueur. 
+Vivox est une des technologies proposés gratuitement aux utilisateurs d'Unity.
+
+- Reconnaissance vocale pour lancer des sorts grâce à des mots-clés
+
+Pour la reconnaissance vocale j'ai utilisé le package UnityEngine.Windows.Speech pour reconnaitre des mots clés lors de l'appui sur une touche.
+
+### Ressources
+
+J'ai écrit tous les scripts de ce projet, mais le reste des ressources (Objets 3D, Musiques, ...) proviennent du Unity Asset Store.
+
+### Difficultés
+
+Comme il s’agissait de mon premier projet multijoueur, la réflexion en termes de client et de serveur a été un vrai défi, notamment pour comprendre quelles requêtes devaient être envoyées et à qui, ce qui rendait aussi le débogage bien plus complexe. Certains des packages utilisés, comme **Vivox**, manquaient de documentation claire, ce qui a rendu leur intégration difficile. Lors des premiers tests avec d’autres utilisateurs, j’ai également découvert des problèmes liés au ping qui n’apparaissaient pas dans mes propres tests. Enfin, la reconnaissance vocale fonctionnait moins bien pour certains joueurs, notamment en raison d’accents ou d’intonations, ce qui a soulevé des contraintes supplémentaires d’accessibilité. 
+
+### Ce que j’ai appris  
+Ce projet m’a permis d’explorer la logique des jeux multijoueurs :  
+- Gestion des données entre le **serveur** et le **client**,  
+- synchronisation des collisions entre joueurs et objets du jeu.  
+- Modification des sons (notamment des voix des joueurs)
+
+### Évolution du projet  
+Les difficultés rencontrées m’ont fait prendre conscience que l’architecture du jeu devait être repensée dès le départ, en particulier sur la gestion des échanges serveur/client. Si je reprends ce projet à l’avenir, je choisirai de repartir de zéro pour appliquer les connaissances acquises et repartir sur une base plus solide. Je m’orienterais notamment vers un package mieux adapté pour la reconnaissance vocale, comme le **Unity Cognitive Speech Services SDK**, afin d’améliorer la fiabilité et la compatibilité avec différents utilisateurs.
 
 ---
+
+## Galerie
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+  <Image src="/src/assets/img/nnfr/image.png" alt="Capture d'écran de No Need For Rogues" />
+  <Image src="/src/assets/img/nnfr/image2.png" alt="Deuxième capture d'écran de No Need For Rogues" />
+  <Image src="/src/assets/img/nnfr/image3.png" alt="Troisième capture d'écran de No Need For Rogues" />
+</div>
+
+---
+
+## Liens
+
+[Voir le projet sur GitHub](https://github.com/CuboidCorp/NoNeedForRogues)
