@@ -6,14 +6,20 @@ import Footer from "../../components/Footer.astro";
 import cityImage from '../../assets/img/city.jpg';
 import imagePP from '../../assets/img/mecrandom.jpg';
 import { Image } from 'astro:assets';
-import Projects from '../../components/sections/Projects.astro';
 
 import { getCollection } from "astro:content";
 import { getLangFromUrl } from "../../i18n/utils"
+import ProjectCard from "../../components/generic/ProjectCard.astro";
 
-const lang = getLangFromUrl(Astro.url)
-const formations = await getCollection("formations");
-const experiences = await getCollection("experiences");
+const lang = getLangFromUrl(Astro.url);
+const formations = await getCollection("formations", (entry) => {
+  return entry.id.startsWith(`${lang}/`);
+});
+const experiences = await getCollection("experiences", (entry) => {
+  return entry.id.startsWith(`${lang}/`);
+});
+
+const projects = await getCollection("blog");
 
 
 ---
@@ -95,17 +101,19 @@ const experiences = await getCollection("experiences");
                             <div class="absolute left-8 top-0 bottom-0 w-1 bg-blue-200"></div>
                             
                             <div class="space-y-6">
-                                {experiences.map((exp) => (
+                                {experiences
+                                    .sort((a, b) => new Date(b.data.period.split(" - ")[1] || new Date().toISOString()).getTime() - new Date(a.data.period.split(" - ")[1] || new Date().toISOString()).getTime())
+                                    .map((exp) => (
                                     <div class="relative pl-16">
                                         <div class="absolute left-8 top-6 transform -translate-x-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-white z-10"></div>
                                         
                                         <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
-                                            <h4 class="text-2xl font-semibold">{exp.title}</h4>
+                                            <h4 class="text-2xl font-semibold">{exp.data.title}</h4>
                                             <p class="text-gray-600 mb-2">
-                                                {exp.company} | {exp.period}
+                                                {exp.data.company} | {exp.data.period}
                                             </p>
                                             <ul class="list-disc list-inside text-gray-700">
-                                                {exp.actions.map((action) => (
+                                                {exp.data.actions.map((action) => (
                                                     <li>{action}</li>
                                                 ))}
                                             </ul>
@@ -124,16 +132,18 @@ const experiences = await getCollection("experiences");
                             <div class="absolute left-8 top-0 bottom-0 w-1 bg-green-200"></div>
                             
                             <div class="space-y-6">
-                                {formations.map((formation) => (
+                                {formations
+                                    .sort((a, b) => new Date(b.data.period.split(" - ")[1] || new Date().toISOString()).getTime() - new Date(a.data.period.split(" - ")[1] || new Date().toISOString()).getTime())
+                                    .map((formation) => (
                                     <div class="relative pl-16">
                                         <div class="absolute left-8 top-6 transform -translate-x-1/2 w-6 h-6 rounded-full bg-green-500 border-4 border-white z-10"></div>
                                         
                                         <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
-                                            <h4 class="text-2xl font-semibold">{formation.title}</h4>
+                                            <h4 class="text-2xl font-semibold">{formation.data.title}</h4>
                                             <p class="text-gray-600 mb-2">
-                                                {formation.school} | {formation.period}
+                                                {formation.data.school} | {formation.data.period}
                                             </p>
-                                            <p class="text-gray-700">{formation.description}</p>
+                                            <p class="text-gray-700">{formation.data.description}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -144,7 +154,25 @@ const experiences = await getCollection("experiences");
             </div>
         </section>
 
-        <Projects />
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12">Mes Projets</h2>
+                <p class="text-center text-lg mb-8">Voici quelques projets sur lesquels j'ai travaillé sur mon temps libre, ou lors de projets durant mes formations.</p>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    {projects
+                        // .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+                        .map((project) => (
+                            <ProjectCard 
+                                title={project.data.titre} 
+                                description={project.data.description} 
+                                link={"/portfolio-website/"+lang+"/project/" + project.data.slug}
+                                technologies={project.data.technologies}
+                                tags={project.data.tags}
+                            />
+                    ))}
+                </div>
+            </div>
+        </section>
     </main>
 	<Footer />
 </body>

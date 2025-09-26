@@ -5,16 +5,18 @@ import { glob } from 'astro/loaders';
 const blog = defineCollection({
     loader: glob({ pattern:"**/*.mdx",base:"./src/content/blog" }),
     schema: z.object({
-        pubDate: z.string(),
         slug: z.string(),
+        titre: z.string(),
+        description: z.string(),
         tags: z.array(z.string()),
+        pubDate: z.date(), 
         technologies: z.array(
-        z.object({
-            name: z.string(),
-            iconUrl: z.string(),
-            color: z.string(),
-        })
-        ),  
+            z.object({
+                name: z.string(),
+                iconUrl: z.string(),
+                color: z.string(),
+            })
+        ), 
   }),
 });
 
@@ -38,4 +40,4 @@ const experiences = defineCollection({
     }),
 });
 
-export const collections = { blog,experiences,formations };
+export const collections = { blog, experiences, formations };
