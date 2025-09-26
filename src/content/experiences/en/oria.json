@@ -1,6 +1,6 @@
 {
-    "title": "Développeur alternant",
+    "title": "Apprentice Software Developer",
     "company": "Oria, Toulouse, 31",
     "period": "2023 - 2025",
-    "actions" : ["Développement d'applications en C#/VB .NET (.NET Framework, .NET 8, .NET 9)","Création de packages NuGets","Optimisation d'applications existantes","Création d'une implémentation CI/CD sur Gitea"]
+    "actions" : ["Development of applications in C#/VB .NET (.NET Framework, .NET 8, .NET 9)","Creation of NuGet packages","Optimization of existing applications","Creation of a CI/CD implementation on Gitea"]
 }

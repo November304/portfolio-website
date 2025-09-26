@@ -19,7 +19,9 @@ const experiences = await getCollection("experiences", (entry) => {
   return entry.id.startsWith(`${lang}/`);
 });
 
-const projects = await getCollection("blog");
+const projects = await getCollection("blog", (entry) => {
+  return entry.id.startsWith(`${lang}/`);
+});
 
 
 ---
