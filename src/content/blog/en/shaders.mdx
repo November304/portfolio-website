@@ -1,0 +1,60 @@
+---
+slug: "shaders"
+lang: "en"
+titre: "Shaders"
+description: "Shader tests on shaderlab"
+tags: ["Personal Project"]
+pubDate: 2025-01-05
+technologies:
+  - name: "GLSL"
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opengl/opengl-original.svg"
+    color: "#32CD32"
+---
+
+import { Image } from "astro:assets"
+
+# Shader Tests
+
+This project groups together my **first experiments with shaders**, carried out on **ShaderToy**.  
+
+## Project Details
+
+### Context  
+
+The objective was to discover the **GLSL** language and experiment with real-time visual rendering. These tests allowed me to understand shader logic and introduce myself to a new way of thinking about graphics programming.  
+
+### What I Learned  
+- Write code in **GLSL**,  
+- Think in terms of **pixels and fragments**,  
+- Understand the basics of **fractals, visual effects and procedural animations**,  
+- Lay the foundation for future integrations in engines like **Unity**.  
+
+### Next Steps  
+I would like to apply this knowledge to more concrete projects:  
+- Use shaders in **Unity** to enrich my games,  
+- Experiment with other mathematical formulas to create more complex effects.
+
+---
+
+## Galerie
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+  <video autoplay loop muted playsinline class="rounded-2xl shadow-md">
+    <source src="/src/assets/img/shaders/mandelbrot.webm" type="video/webm" />
+  </video>
+  <video autoplay loop muted playsinline class="rounded-2xl shadow-md">
+    <source src="/src/assets/img/shaders/plasma.webm" type="video/webm" />
+  </video>
+  <video autoplay loop muted playsinline class="rounded-2xl shadow-md">
+    <source src="/src/assets/img/shaders/spiral.webm" type="video/webm" />
+  </video>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+  <video autoplay loop muted playsinline class="rounded-2xl shadow-md">
+    <source src="/src/assets/img/shaders/tutocross.webm" type="video/webm" />
+  </video>
+  <video autoplay loop muted playsinline class="rounded-2xl shadow-md">
+    <source src="/src/assets/img/shaders/waterdrop.webm" type="video/webm" />
+  </video>
+</div>

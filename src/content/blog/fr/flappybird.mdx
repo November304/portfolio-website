@@ -1,5 +1,6 @@
 ---
 slug: "flappy-bird"
+lang: "fr"
 titre: "Flappy bird"
 description: "Simple jeu 2D"
 tags: ["BUT"]
@@ -14,6 +15,8 @@ technologies:
 ---
 
 import { Image } from "astro:assets"
+import flappyDead from "../../../assets/img/flappybird/flappydead.png"
+import flappyPlay from "../../../assets/img/flappybird/flappyplay.png"
 
 # Flappy Bird
 
@@ -40,6 +43,6 @@ Ce projet faisait partie d’un apprentissage guidé sur Unity. Bien que j’ét
 ## Galerie
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-  <Image src="/src/assets/img/flappybird/flappydead.png" alt="Écran de game over de Flappy Bird" />
-  <Image src="/src/assets/img/flappybird/flappyplay.png" alt="Gameplay de Flappy Bird en cours de partie" />
+  <Image src={flappyDead} alt="Écran de game over de Flappy Bird" />
+  <Image src={flappyPlay} alt="Gameplay de Flappy Bird en cours de partie" />
 </div>

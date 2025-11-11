@@ -1,5 +1,6 @@
 ---
 slug: "locur4iot"
+lang: "fr"
 titre: "Locur4iot"
 description: "Projet fullstack en PHP / JavaScript"
 tags: ["BUT", "Equipe"]
@@ -14,6 +15,8 @@ technologies:
 ---
 
 import { Image } from "astro:assets"
+import testbedMap from "../../../assets/img/locura/testbed_map.png"
+import diag from "../../../assets/img/locura/diag.png"
 
 # Site Web locur4iot
 
@@ -44,6 +47,6 @@ La gestion de la communication via **MQTT** et l’actualisation des données en
 ## Galerie
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-  <Image src="/src/assets/img/locura/testbed_map.png" alt="Carte du testbed pour le projet locur4iot" />
-  <Image src="/src/assets/img/locura/diag.png" alt="Diagramme illustrant le fonctionnement du système locur4iot" />
+  <Image src={testbedMap} alt="Carte du testbed pour le projet locur4iot" />
+  <Image src={diag} alt="Diagramme illustrant le fonctionnement du système locur4iot" />
 </div>

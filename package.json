@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.6",
+    "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.0.17",
     "astro": "^5.5.5",
     "swiper": "^11.2.6",

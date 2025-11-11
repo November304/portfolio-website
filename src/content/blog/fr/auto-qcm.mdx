@@ -1,5 +1,6 @@
 ---
 slug: "auto-qcm"
+lang: "fr"
 titre: "Auto QCM"
 description: "Projet web django, avec IA et intégration avec Moodle"
 tags: ["Equipe", "BUT", "Montage"]
@@ -11,6 +12,9 @@ technologies:
 ---
 
 import { Image } from "astro:assets"
+import correction from "../../../assets/img/autoqcm/correction.png"
+import dashboard from "../../../assets/img/autoqcm/dashboard.png"
+import listeqcm from "../../../assets/img/autoqcm/listeqcm.png"
 
 # Auto QCM
 
@@ -39,9 +43,9 @@ Ce projet a été réalisé en groupe dans le cadre de ma formation en BUT Infor
 ## Galerie
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-  <Image src="/src/assets/img/autoqcm/correction.png" alt="Capture d'écran de la correction automatique dans Auto QCM" />
-  <Image src="/src/assets/img/autoqcm/dashboard.png" alt="Capture d'écran du tableau de bord d'Auto QCM" />
-  <Image src="/src/assets/img/autoqcm/listeqcm.png" alt="Capture d'écran de la liste des QCM" />
+  <Image src={correction} alt="Capture d'écran de la correction automatique dans Auto QCM" />
+  <Image src={dashboard} alt="Capture d'écran du tableau de bord d'Auto QCM" />
+  <Image src={listeqcm} alt="Capture d'écran de la liste des QCM" />
 </div>
 
 ---

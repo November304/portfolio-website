@@ -1,0 +1,73 @@
+---
+slug: "countdown-crew"
+lang: "en"
+titre: "Countdown Crew"
+description: "Asymmetrical 3D multiplayer cooperative game"
+tags: ["Multiplayer", "Personal Project"]
+pubDate: 2025-03-29
+technologies:
+  - name: "Unity"
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"
+    color: "#222222"
+  - name: "C#"
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+    color: "#68217A"
+---
+
+import { Image } from "astro:assets"
+import mainmenu from "../../../assets/img/bombgame/mainmenu.png"
+import bomb from "../../../assets/img/bombgame/bomb.png"
+import levelselect from "../../../assets/img/bombgame/levelselect.png"
+import manuel from "../../../assets/img/bombgame/manuel.png"
+import computer from "../../../assets/img/bombgame/computer.png"
+
+# Countdown Crew
+
+**Countdown Crew** is a cooperative multiplayer game where one player must defuse a bomb by communicating with another player who has the manual.  
+
+## Project Details
+
+### Concept  
+
+Inspired by the game *Keep Talking and Nobody Explodes*, this project offers a similar experience but enriched:  
+- Introduction of **random elements in the manual**,  
+- Creation of **original new modules**,  
+- System of **asymmetric cooperation** between two players (the defuser and the expert).  
+
+### Developed Features  
+- **Generation and display** of a bomb composed of multiple modules.  
+- Creation and management of the **manual** to guide the expert.  
+- User interface for navigating the game.  
+- **Translation system** with support for French and English.  
+
+### Current Status and Challenges  
+Development has reached a first playable version with the basics of gameplay. However, a testing phase with multiple players is necessary to fix bugs and adjust mechanics. Finding new module ideas remains a creative challenge.  
+
+### What I Learned  
+- Deepening my skills in **Unity** and **C#**.  
+- Managing **asymmetric cooperation** in a multiplayer game.  
+- Implementing a **multilingual system** integrated into gameplay.  
+
+### Project Evolution  
+Development is currently on pause to allow for testing and debugging. Eventually, my goal is to continue improving it until achieving a stable and complete version, potentially published on **itch.io**.  
+
+---
+
+## Gallery
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+  <Image src={mainmenu} alt="Countdown Crew main menu" />
+  <Image src={bomb} alt="Bomb defusing interface" />
+  <Image src={levelselect} alt="Level selection screen" />
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+  <Image src={manuel} alt="Countdown Crew manual page" />
+  <Image src={computer} alt="Expert player interface with computer" />
+</div>
+
+---
+
+## Links
+
+[View the project on GitHub](https://github.com/CuboidCorp/bomb-game)

@@ -11,14 +11,17 @@ export const ui = {
     'nav.about': 'About',
     'nav.journey': 'Journey',
     'nav.projects': 'Projects',
-    'nav.twitter': 'Twitter',
-    'nav.copyright': 'All rights reserved'
+    'nav.copyright': 'All rights reserved',
+    'footer.copyright': 'All rights reserved',
+    'footer.imageCredit': 'Home image designed by rawpixel.com / Freepik'
   },
   fr: {
     'nav.home': 'Accueil',
     'nav.about': 'À propos',
     'nav.journey': 'Parcours',
     'nav.projects': 'Projets',
-    'nav.copyright': 'Tous droits réservés'
+    'nav.copyright': 'Tous droits réservés',
+    'footer.copyright': 'Tous droits réservés',
+    'footer.imageCredit': 'Image d\'accueil conçue par rawpixel.com / Freepik'
   },
 } as const;

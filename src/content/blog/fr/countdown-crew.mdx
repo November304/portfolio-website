@@ -1,5 +1,6 @@
 ---
 slug: "countdown-crew"
+lang: "fr"
 titre: "Countdown Crew"
 description: "Jeu 3D multijoueur asymétrique de coopération"
 tags: ["Multijoueur", "Projet Perso"]
@@ -14,6 +15,11 @@ technologies:
 ---
 
 import { Image } from "astro:assets"
+import mainmenu from "../../../assets/img/bombgame/mainmenu.png"
+import bomb from "../../../assets/img/bombgame/bomb.png"
+import levelselect from "../../../assets/img/bombgame/levelselect.png"
+import manuel from "../../../assets/img/bombgame/manuel.png"
+import computer from "../../../assets/img/bombgame/computer.png"
 
 # Countdown Crew
 
@@ -50,14 +56,14 @@ Le développement est actuellement en pause pour permettre des tests et du débo
 ## Galerie
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-  <Image src="/src/assets/img/bombgame/mainmenu.png" alt="Menu principal de Countdown Crew" />
-  <Image src="/src/assets/img/bombgame/bomb.png" alt="Interface de désamorçage de la bombe" />
-  <Image src="/src/assets/img/bombgame/levelselect.png" alt="Écran de sélection des niveaux" />
+  <Image src={mainmenu} alt="Menu principal de Countdown Crew" />
+  <Image src={bomb} alt="Interface de désamorçage de la bombe" />
+  <Image src={levelselect} alt="Écran de sélection des niveaux" />
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-  <Image src="/src/assets/img/bombgame/manuel.png" alt="Page du manuel de Countdown Crew" />
-  <Image src="/src/assets/img/bombgame/computer.png" alt="Interface du joueur expert avec l’ordinateur" />
+  <Image src={manuel} alt="Page du manuel de Countdown Crew" />
+  <Image src={computer} alt="Interface du joueur expert avec l'ordinateur" />
 </div>
 
 ---

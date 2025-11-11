@@ -1,0 +1,42 @@
+---
+import "../../../styles/global.css";
+import Header from '../../../components/Header.astro';
+import Footer from "../../../components/Footer.astro";
+import ImageLightbox from "../../../components/ImageLightbox.astro";
+
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('blog', (entry) => {
+    return entry.data.lang === 'en';
+  });
+
+  const paths = pages.map(page => {
+    const [lang, filename] = page.id.split('/');
+    const slug = filename.replace('.mdx', '');
+    return { params: { slug }, props: page };
+  });
+
+  return paths;
+}
+
+const page = Astro.props;
+const { Content } = await render(page);
+---
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio Site</title>
+</head>
+<body class="bg-white text-gray-900">
+    <Header />
+    <main class="min-h-screen py-20">
+        <article class="container mx-auto px-4 max-w-6xl prose">
+            <Content />
+        </article>
+    </main>
+    <Footer />
+    <ImageLightbox />
+</body>
+</html>
