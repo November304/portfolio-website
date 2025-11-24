@@ -19,6 +19,10 @@ const experiences = await getCollection("experiences", (entry) => {
   return entry.id.startsWith(`${lang}/`);
 });
 
+const volunteering = await getCollection("volunteering", (entry) => {
+  return entry.id.startsWith(`${lang}/`);
+});
+
 const projects = await getCollection("blog", (entry) => {
   return entry.data.lang == lang;
 });
@@ -88,9 +92,6 @@ const projects = await getCollection("blog", (entry) => {
                         <p class="text-gray-700 mb-4 text-justify">
                             Passionné par le développement de jeux vidéo, je développe régulièrement des prototypes et des mécaniques de jeu avec Unity. J'aime particulièrement concevoir des environnements 2D ou 3D interactifs, travailler sur l'optimisation des performances et relever les défis créatifs du game design.
                         </p>
-                        <p class="text-gray-700 mb-4 text-justify">
-                            Depuis peu, je découvre également le monde de la réalité virtuelle (VR) et je travaille actuellement sur le développement d'un jeu vidéo en VR.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -99,6 +100,11 @@ const projects = await getCollection("blog", (entry) => {
         <section id="journey" class="py-20 bg-gray-50">
             <div class="container mx-auto px-4">
                 <h2 class="text-4xl font-bold text-center mb-12">Mon Parcours</h2>
+                <div class="max-w-3xl mx-auto mb-12 text-center">
+                    <p class="text-gray-700">
+                        Vous trouverez ci-dessous mes expériences professionnelles, ma formation depuis le lycée, ainsi que mes engagements citoyens à travers le bénévolat.
+                    </p>
+                </div>
                 <div class="grid md:grid-cols-2 gap-12">
                     <div>
                         <h3 class="text-3xl font-semibold mb-8 text-center">
@@ -159,6 +165,33 @@ const projects = await getCollection("blog", (entry) => {
                     </div>
                 </div>
             </div>
+
+            <div class="mt-12 max-w-3xl mx-auto text-center">
+                <h3 class="text-2xl font-semibold mb-4">Engagement civique</h3>
+                <p class="text-gray-700 text-justify">
+                    J'ai eu l'opportunité de m'engager en tant que bénévole au sein d'associations et d'événements en lien avec mon cursus à l'ENSEEIHT.
+                </p>
+
+                <div class="mt-6 space-y-6">
+                    {volunteering
+                        .sort((a, b) => new Date(b.data.date || new Date().toISOString()).getTime() - new Date(a.data.date || new Date().toISOString()).getTime())
+                        .map((vol, idx) => (
+                        <div class={`bg-white p-4 rounded-lg shadow-md border-l-4 border-purple-500 flex flex-col md:flex-row ${idx % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>
+                            <div class="flex-shrink-0 flex justify-center items-center md:w-1/3">
+                                <Image src={vol.data.image} alt={vol.data.title} width={320} height={240} class="rounded shadow-md object-cover"/>
+                            </div>
+                            <div class="md:w-2/3 md:px-6 flex flex-col justify-center">
+                                <h4 class="text-xl font-semibold mb-2">{vol.data.title}</h4>
+                                <p class="text-gray-600 mb-2 text-justify">
+                                    {vol.data.description}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+            </div>
+
         </section>
 
         <section id="projects" class="py-20">

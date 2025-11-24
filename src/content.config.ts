@@ -47,4 +47,14 @@ const experiences = defineCollection({
     }),
 });
 
-export const collections = { blog, experiences, formations };
+const volunteering = defineCollection({
+    loader: glob({ pattern:"**/*.json",base:"./src/content/volunteering"}),
+    schema: z.object({
+        title: z.string(),
+        date: z.coerce.date(),
+        image: z.string(),
+        description: z.string(),
+    }),
+});
+
+export const collections = { blog, experiences, formations, volunteering };
