@@ -8,3 +8,20 @@ Separer les tags des technologies sur les projets et les render vers le haut ave
 Mettre des animations sur les boutons et les liens
 Améliorer la section parcours en essayant de mettre quelque chose qui lie les différentes expériences
 Ajouter une description avant les différentes sections
+Dire pk j'ai fait un portfolio
+Faire plusieurs pages plutot
+Ecrire une histoire pour tout 
+Pr l'elevator pitch pas de 
+
+Onglets : 
+Accueil 
+=> Photo d'accueil, photo de moi + ptite présentation de pk moi, ... Lien CV en fonction de la langue. Espace pour l'elevator pitch en dessous et truc avec les interview aussi 
+Engineering Course
+(Pas mettre la liste des cours)
+=> Mettre le lien avec net7 que je m'investis dans des projets de développement avec la liste
+CSR Engagement (RSE)
+=> Ptite histoire de pk c'est bien et pourquoi ça m'intéresse. Mettre le clean walk plus bénévolat CDL mais en plus gros
+International
+=> Touver quelques universités + mettre extrait du mail 
+Projets
+=> Liens avec les projets BUT + Perso

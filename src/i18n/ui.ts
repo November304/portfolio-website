@@ -8,8 +8,9 @@ export const defaultLang = 'fr';
 export const ui = {
   en: {
     'nav.home': 'Home',
-    'nav.about': 'About',
-    'nav.journey': 'Journey',
+    'nav.engineering': 'Engineering Course',
+    'nav.csr': 'CSR Engagement',
+    'nav.international': 'International',
     'nav.projects': 'Projects',
     'nav.copyright': 'All rights reserved',
     'footer.copyright': 'All rights reserved',
@@ -17,8 +18,9 @@ export const ui = {
   },
   fr: {
     'nav.home': 'Accueil',
-    'nav.about': 'À propos',
-    'nav.journey': 'Parcours',
+    'nav.engineering': 'Parcours Ingénieur',
+    'nav.csr': 'Engagement RSE',
+    'nav.international': 'International',
     'nav.projects': 'Projets',
     'nav.copyright': 'Tous droits réservés',
     'footer.copyright': 'Tous droits réservés',

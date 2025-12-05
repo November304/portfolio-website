@@ -59,9 +59,9 @@ const projects = await getCollection("blog", (entry) => {
             </div>
         </section>
 
-        <section id="about" class="bg-gray-100 py-20">
+        <section id="home" class="bg-gray-100 py-20">
             <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
+                <h2 class="text-4xl font-bold text-center mb-12">Home</h2>
                 <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
                     <div class="flex flex-col items-center">
                         <Image 
@@ -69,7 +69,7 @@ const projects = await getCollection("blog", (entry) => {
                             alt="Profile of Nathan Pagnucco" 
                             class="rounded-lg shadow-md w-48 h-auto sm:w-64 md:w-72"
                         />
-                        <p class="mt-4 font-semibold">Email :</p>
+                        <p class="mt-4 font-semibold">Email:</p>
                         <a 
                             href="mailto:nathan.pagnucco@gmail.com" 
                             class="text-blue-500 hover:underline"
@@ -77,7 +77,7 @@ const projects = await getCollection("blog", (entry) => {
                             nathan.pagnucco@gmail.com
                         </a>
                         <a 
-                            href="/portfolio-website/CVNP.pdf" 
+                            href="/portfolio-website/CVNP-en.pdf" 
                             download 
                             class="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
                         >
@@ -85,78 +85,108 @@ const projects = await getCollection("blog", (entry) => {
                         </a>
                     </div>
                     <div>
+                        <h3 class="text-2xl font-bold mb-4">Why Me?</h3>
                         <p class="text-gray-700 mb-4 text-justify">
                             Currently in my first year of engineering school at ENSEEIHT, working in an apprenticeship at Sopra Steria, I specialize in software development. This apprenticeship program allows me to combine academic theory with professional practice, particularly through optimization and code maintenance missions.
                         </p>
                         <p class="text-gray-700 mb-4 text-justify">
                             Passionate about video game development, I regularly develop prototypes and game mechanics with Unity. I particularly enjoy designing interactive 2D or 3D environments, working on performance optimization, and tackling the creative challenges of game design.
                         </p>
+                        <p class="text-gray-700 mb-4 text-justify">
+                            My involvement in student associations and my interest in the international and societal dimensions of engineering allow me to have a comprehensive and responsible vision of my future professional role.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Password-protected section -->
+                <div class="mt-12 max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4 text-center">Protected Area</h3>
+                    <div id="protected-section" class="text-center">
+                        <p class="text-gray-600 mb-4">This section contains the elevator pitch and interviews. Please enter the password to access it.</p>
+                        <input 
+                            type="password" 
+                            id="password-input" 
+                            placeholder="Password"
+                            class="px-4 py-2 border border-gray-300 rounded mb-4 w-64"
+                        />
+                        <button 
+                            id="unlock-btn"
+                            class="px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 ml-2"
+                        >
+                            Unlock
+                        </button>
+                        <p id="error-msg" class="text-red-500 mt-2 hidden">Incorrect password</p>
+                    </div>
+                    <div id="protected-content" class="hidden">
+                        <div class="mb-6">
+                            <h4 class="text-xl font-semibold mb-3">Elevator Pitch</h4>
+                            <p class="text-gray-700 text-justify">
+                                [Your elevator pitch here - to be customized]
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-3">Interviews</h4>
+                            <p class="text-gray-700 text-justify">
+                                [Your interviews here - to be customized]
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <section id="journey" class="py-20 bg-gray-50">
+        <section id="engineering" class="py-20 bg-white">
             <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12">My Journey</h2>
-                <div class="max-w-3xl mx-auto mb-12 text-center">
-                    <p class="text-gray-700">
-                        Below are my professional experiences, formal education since high school, and civic engagement through volunteering.
-                    </p>
-                </div>
-                <div class="grid md:grid-cols-2 gap-12">
-                    <div>
-                        <h3 class="text-3xl font-semibold mb-8 text-center">
-                            Professional Experiences
-                        </h3>
-                        <div class="relative">
-                            <div class="absolute left-8 top-0 bottom-0 w-1 bg-blue-200"></div>
-                            
-                            <div class="space-y-6">
+                <h2 class="text-4xl font-bold text-center mb-12">Engineering Course</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-4">ENSEEIHT - Digital Sciences</h3>
+                        <p class="text-gray-700 mb-4 text-justify">
+                            I am currently a student in the engineering program at ENSEEIHT (École Nationale Supérieure d'Électrotechnique, d'Électronique, d'Informatique, d'Hydraulique et des Télécommunications) in Digital Sciences. This excellent program allows me to deepen my skills in two complementary areas:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-700 mb-4 space-y-2">
+                            <li><strong>Networks and Telecommunications:</strong> I study network architecture, communication protocols, distributed system security, and modern telecommunications infrastructures.</li>
+                            <li><strong>Software Development:</strong> I train in development methodologies, software architecture, databases, artificial intelligence, and web and mobile technologies.</li>
+                        </ul>
+                        
+                        <h4 class="text-xl font-semibold mb-3 mt-6">Student Association Involvement</h4>
+                        <p class="text-gray-700 mb-4 text-justify">
+                            Beyond my studies, I actively participate in the school's student life, particularly within <strong>net7</strong>, ENSEEIHT's computer science association. As <strong>Vice-President</strong>, I coordinate several activities:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-700 mb-4 space-y-2">
+                            <li><strong>Video Game Development:</strong> Organizing game jams and creating playful prototypes with the team.</li>
+                            <li><strong>Web Development:</strong> Designing and maintaining websites for the association and the school.</li>
+                            <li><strong>IT Management:</strong> System administration, technical support, and association infrastructure management.</li>
+                        </ul>
+                        <p class="text-gray-700 text-justify">
+                            These responsibilities allow me to develop my project management, teamwork, and leadership skills while actively contributing to the student community.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 grid md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
+                            <h4 class="text-xl font-semibold mb-3">Professional Experiences</h4>
+                            <div class="space-y-4">
                                 {experiences
                                     .sort((a, b) => new Date(b.data.period.split(" - ")[1] || new Date().toISOString()).getTime() - new Date(a.data.period.split(" - ")[1] || new Date().toISOString()).getTime())
                                     .map((exp) => (
-                                    <div class="relative pl-16">
-                                        <div class="absolute left-8 top-6 transform -translate-x-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-white z-10"></div>
-                                        
-                                        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
-                                            <h4 class="text-2xl font-semibold">{exp.data.title}</h4>
-                                            <p class="text-gray-600 mb-2">
-                                                {exp.data.company} | {exp.data.period}
-                                            </p>
-                                            <ul class="list-disc list-inside text-gray-700">
-                                                {exp.data.actions.map((action) => (
-                                                    <li>{action}</li>
-                                                ))}
-                                            </ul>
-                                        </div>
+                                    <div>
+                                        <p class="font-semibold">{exp.data.title}</p>
+                                        <p class="text-sm text-gray-600">{exp.data.company} | {exp.data.period}</p>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                    </div>
-
-                    <div>
-                        <h3 class="text-3xl font-semibold mb-8 text-center">
-                            Education
-                        </h3>
-                        <div class="relative">
-                            <div class="absolute left-8 top-0 bottom-0 w-1 bg-green-200"></div>
-                            
-                            <div class="space-y-6">
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
+                            <h4 class="text-xl font-semibold mb-3">Education</h4>
+                            <div class="space-y-4">
                                 {formations
                                     .sort((a, b) => new Date(b.data.period.split(" - ")[1] || new Date().toISOString()).getTime() - new Date(a.data.period.split(" - ")[1] || new Date().toISOString()).getTime())
                                     .map((formation) => (
-                                    <div class="relative pl-16">
-                                        <div class="absolute left-8 top-6 transform -translate-x-1/2 w-6 h-6 rounded-full bg-green-500 border-4 border-white z-10"></div>
-                                        
-                                        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
-                                            <h4 class="text-2xl font-semibold">{formation.data.title}</h4>
-                                            <p class="text-gray-600 mb-2">
-                                                {formation.data.school} | {formation.data.period}
-                                            </p>
-                                            <p class="text-gray-700">{formation.data.description}</p>
-                                        </div>
+                                    <div>
+                                        <p class="font-semibold">{formation.data.title}</p>
+                                        <p class="text-sm text-gray-600">{formation.data.school} | {formation.data.period}</p>
                                     </div>
                                 ))}
                             </div>
@@ -164,33 +194,111 @@ const projects = await getCollection("blog", (entry) => {
                     </div>
                 </div>
             </div>
-
-            <div class="mt-12 max-w-3xl mx-auto text-center">
-                <h3 class="text-2xl font-semibold mb-4">Civic Engagement</h3>
-                <p class="text-gray-700 text-justify">
-                    I had the opportunity to volunteer with associations related to my studies at ENSEEIHT.
-                </p>
-
-                <div class="mt-6 space-y-6">
-                    {volunteering
-                        .sort((a, b) => new Date(b.data.date || new Date().toISOString()).getTime() - new Date(a.data.date || new Date().toISOString()).getTime())
-                        .map((vol, idx) => (
-                        <div class={`bg-white p-4 rounded-lg shadow-md border-l-4 border-purple-500 flex flex-col md:flex-row ${idx % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>
-                            <div class="flex-shrink-0 flex justify-center items-center md:w-1/3">
-                                <Image src={vol.data.image} alt={vol.data.title} width={320} height={240} class="rounded shadow-md object-cover"/>
+        </section>
+        
+        <section id="csr" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12">CSR Engagement</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Why Corporate Social Responsibility?</h3>
+                        <p class="text-gray-700 mb-4 text-justify">
+                            Corporate Social Responsibility (CSR) represents for me much more than just a concept: it's a deep conviction that tomorrow's engineers must integrate environmental and societal challenges into their professional practice.
+                        </p>
+                        <p class="text-gray-700 mb-4 text-justify">
+                            In a world facing the challenges of climate change, inclusivity, and social equity, I firmly believe that our generation of engineers has the responsibility to design sustainable and ethical technological solutions. That's why I actively engage in initiatives that have a positive impact on society and the environment.
+                        </p>
+                        <p class="text-gray-700 text-justify">
+                            My CSR commitment is realized through volunteer actions that allow me to directly contribute to causes that are close to my heart, while developing civic awareness essential to my future engineering career.
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        {volunteering
+                            .sort((a, b) => new Date(b.data.date || new Date().toISOString()).getTime() - new Date(a.data.date || new Date().toISOString()).getTime())
+                            .map((vol) => (
+                            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500">
+                                <div class="flex flex-col md:flex-row gap-6">
+                                    <div class="flex-shrink-0 flex justify-center items-center md:w-1/3">
+                                        <Image src={vol.data.image} alt={vol.data.title} width={400} height={300} class="rounded shadow-md object-cover"/>
+                                    </div>
+                                    <div class="md:w-2/3 flex flex-col justify-center">
+                                        <h4 class="text-2xl font-semibold mb-3">{vol.data.title}</h4>
+                                        <p class="text-gray-700 text-justify text-lg">
+                                            {vol.data.description}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="md:w-2/3 md:px-6 flex flex-col justify-center">
-                                <h4 class="text-xl font-semibold mb-2">{vol.data.title}</h4>
-                                <p class="text-gray-600 mb-2 text-justify">
-                                    {vol.data.description}
-                                </p>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="international" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12">International</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md mb-8">
+                        <h3 class="text-2xl font-bold mb-4">An International Project</h3>
+                        <p class="text-gray-700 mb-4 text-justify">
+                            International experience is an integral part of the engineering curriculum at ENSEEIHT. As part of my degree, I am required to complete an experience abroad, an opportunity that particularly interests me for several reasons:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-700 mb-4 space-y-2">
+                            <li>Discover new pedagogical approaches and work methodologies</li>
+                            <li>Perfect my English language skills</li>
+                            <li>Immerse myself in a different culture and develop my adaptability</li>
+                            <li>Expand my international professional network</li>
+                            <li>Enrich my academic journey with global perspectives</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg shadow-md mb-8 border-l-4 border-blue-500">
+                        <h3 class="text-xl font-bold mb-4">Target English-Speaking Universities</h3>
+                        <p class="text-gray-700 mb-4">I am particularly interested in the following universities for their academic excellence in computer science and digital sciences programs:</p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-gray-50 p-4 rounded">
+                                <p class="font-semibold">🇬🇧 United Kingdom</p>
+                                <ul class="text-sm text-gray-700 mt-2 space-y-1">
+                                    <li>• University of Edinburgh</li>
+                                    <li>• Imperial College London</li>
+                                    <li>• University College London (UCL)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded">
+                                <p class="font-semibold">🇨🇦 Canada</p>
+                                <ul class="text-sm text-gray-700 mt-2 space-y-1">
+                                    <li>• University of Toronto</li>
+                                    <li>• McGill University</li>
+                                    <li>• University of British Columbia</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded">
+                                <p class="font-semibold">🇦🇺 Australia</p>
+                                <ul class="text-sm text-gray-700 mt-2 space-y-1">
+                                    <li>• Australian National University</li>
+                                    <li>• University of Melbourne</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded">
+                                <p class="font-semibold">🇸🇪 Sweden</p>
+                                <ul class="text-sm text-gray-700 mt-2 space-y-1">
+                                    <li>• KTH Royal Institute of Technology</li>
+                                    <li>• Chalmers University</li>
+                                </ul>
                             </div>
                         </div>
-                    ))}
+                    </div>
+                    
+                    <div class="bg-green-50 p-6 rounded-lg shadow-md border-l-4 border-green-500">
+                        <h4 class="text-lg font-semibold mb-3">✓ Feasibility Confirmation</h4>
+                        <p class="text-gray-700 text-justify italic">
+                            "According to information provided by the school's human resources department, this international project is entirely feasible within my apprenticeship program. Similar cases have already been successfully managed, and the school has the necessary mechanisms to support students in this type of international mobility."
+                        </p>
+                    </div>
                 </div>
-
             </div>
-
         </section>
 
         <section id="projects" class="py-20">
@@ -214,5 +322,33 @@ const projects = await getCollection("blog", (entry) => {
         </section>
     </main>
 	<Footer />
+	
+	<script>
+		// Script for password-protected section
+		const passwordInput = document.getElementById('password-input') as HTMLInputElement;
+		const unlockBtn = document.getElementById('unlock-btn') as HTMLButtonElement;
+		const errorMsg = document.getElementById('error-msg') as HTMLElement;
+		const protectedSection = document.getElementById('protected-section') as HTMLElement;
+		const protectedContent = document.getElementById('protected-content') as HTMLElement;
+		
+		// Simple password - Change according to your needs
+		const correctPassword = 'portfolio2024';
+		
+		unlockBtn?.addEventListener('click', () => {
+			if (passwordInput?.value === correctPassword) {
+				protectedSection?.classList.add('hidden');
+				protectedContent?.classList.remove('hidden');
+				errorMsg?.classList.add('hidden');
+			} else {
+				errorMsg?.classList.remove('hidden');
+			}
+		});
+		
+		passwordInput?.addEventListener('keypress', (e) => {
+			if (e.key === 'Enter') {
+				unlockBtn?.click();
+			}
+		});
+	</script>
 </body>
 </html>
