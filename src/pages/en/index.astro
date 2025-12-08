@@ -57,7 +57,7 @@ const projects = await getCollection("blog", (entry) => {
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
             </div>
-        </section>
+        </section>alternation
 
         <section id="home" class="bg-gray-100 py-20">
             <div class="container mx-auto px-4">
@@ -83,17 +83,44 @@ const projects = await getCollection("blog", (entry) => {
                         >
                             Download My CV
                         </a>
+                        
+                        <div class="flex gap-3 mt-4">
+                            <a 
+                                href="https://www.linkedin.com/in/nathan-pagnucco-53b7ab265/" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center gap-2 px-4 py-2 bg-blue-700 text-white rounded hover:bg-blue-800 transition"
+                                title="LinkedIn"
+                            >
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                                LinkedIn
+                            </a>
+                            <a 
+                                href="https://github.com/November304" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900 transition"
+                                title="GitHub"
+                            >
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
                     </div>
                     <div>
                         <h3 class="text-2xl font-bold mb-4">Why Me?</h3>
                         <p class="text-gray-700 mb-4 text-justify">
-                            Currently in my first year of engineering school at ENSEEIHT, working in an apprenticeship at Sopra Steria, I specialize in software development. This apprenticeship program allows me to combine academic theory with professional practice, particularly through optimization and code maintenance missions.
+                            I am currently an engineering student at ENSEEIHT in an apprenticeship program at Sopra Steria. This format allows me to combine academic training with concrete professional experience.
                         </p>
                         <p class="text-gray-700 mb-4 text-justify">
-                            Passionate about video game development, I regularly develop prototypes and game mechanics with Unity. I particularly enjoy designing interactive 2D or 3D environments, working on performance optimization, and tackling the creative challenges of game design.
+                            In parallel with my studies, I actively participate in the school's student life: Vice-President of the newspaper, member of net7 (the computer science association), and Vice-President of a list. These commitments allow me to develop my communication, project management, and teamwork skills.
                         </p>
                         <p class="text-gray-700 mb-4 text-justify">
-                            My involvement in student associations and my interest in the international and societal dimensions of engineering allow me to have a comprehensive and responsible vision of my future professional role.
+                            Passionate about video game development, I regularly create prototypes with Unity, which allows me to explore my creativity while perfecting my technical skills.
                         </p>
                     </div>
                 </div>
@@ -142,24 +169,30 @@ const projects = await getCollection("blog", (entry) => {
                     <div class="bg-gray-50 p-8 rounded-lg shadow-md">
                         <h3 class="text-2xl font-bold mb-4">ENSEEIHT - Digital Sciences</h3>
                         <p class="text-gray-700 mb-4 text-justify">
-                            I am currently a student in the engineering program at ENSEEIHT (École Nationale Supérieure d'Électrotechnique, d'Électronique, d'Informatique, d'Hydraulique et des Télécommunications) in Digital Sciences. This excellent program allows me to deepen my skills in two complementary areas:
+                            I am currently a student in the engineering program at ENSEEIHT (École Nationale Supérieure d'Électrotechnique, d'Électronique, d'Informatique, d'Hydraulique et des Télécommunications) in Digital Sciences. This program covers a broad spectrum of skills in computer science and telecommunications, with a particular focus on two major areas:
                         </p>
                         <ul class="list-disc list-inside text-gray-700 mb-4 space-y-2">
-                            <li><strong>Networks and Telecommunications:</strong> I study network architecture, communication protocols, distributed system security, and modern telecommunications infrastructures.</li>
-                            <li><strong>Software Development:</strong> I train in development methodologies, software architecture, databases, artificial intelligence, and web and mobile technologies.</li>
+                            <li><strong>Networks and Telecommunications:</strong> Network architecture, communication protocols, distributed system security, and modern telecommunications infrastructures.</li>
+                            <li><strong>Software Development:</strong> Development methodologies, software architecture, databases, artificial intelligence, and web and mobile technologies.</li>
                         </ul>
                         
                         <h4 class="text-xl font-semibold mb-3 mt-6">Student Association Involvement</h4>
                         <p class="text-gray-700 mb-4 text-justify">
-                            Beyond my studies, I actively participate in the school's student life, particularly within <strong>net7</strong>, ENSEEIHT's computer science association. As <strong>Vice-President</strong>, I coordinate several activities:
+                            Beyond my studies, I actively participate in the school's student life through several roles:
                         </p>
-                        <ul class="list-disc list-inside text-gray-700 mb-4 space-y-2">
-                            <li><strong>Video Game Development:</strong> Organizing game jams and creating playful prototypes with the team.</li>
-                            <li><strong>Web Development:</strong> Designing and maintaining websites for the association and the school.</li>
-                            <li><strong>IT Management:</strong> System administration, technical support, and association infrastructure management.</li>
+                        <ul class="list-disc list-inside text-gray-700 mb-4 space-y-3">
+                            <li><strong>Vice-President of a list:</strong> Lists are two groups of first-year students competing by organizing events to join the second-year student association in various offices (Student Bureau, Arts Bureau, Student Lounge, etc.). This role allows me to develop my event organization and teamwork skills.</li>
+                            <li><strong>Vice-President of the school newspaper:</strong> This responsibility allows me to improve my writing skills and develop my questioning abilities through interviews I conduct with students, professors, and professionals.</li>
+                            <li><strong>Member of net7 (computer science association):</strong> I work on concrete IT projects such as creating websites and dashboards for other associations and clubs at the school, which allows me to apply my technical skills to serve the community.</li>
                         </ul>
                         <p class="text-gray-700 text-justify">
-                            These responsibilities allow me to develop my project management, teamwork, and leadership skills while actively contributing to the student community.
+                            These responsibilities allow me to develop my project management, communication, teamwork, and leadership skills while actively contributing to the school's student life.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 max-w-4xl mx-auto text-center">
+                        <p class="text-gray-700 text-lg">
+                            Here's an overview of my professional and academic journey that has brought me here.
                         </p>
                     </div>
                     
@@ -172,7 +205,14 @@ const projects = await getCollection("blog", (entry) => {
                                     .map((exp) => (
                                     <div>
                                         <p class="font-semibold">{exp.data.title}</p>
-                                        <p class="text-sm text-gray-600">{exp.data.company} | {exp.data.period}</p>
+                                        <p class="text-sm text-gray-600 mb-2">{exp.data.company} | {exp.data.period}</p>
+                                        {exp.data.actions && exp.data.actions.length > 0 && (
+                                            <ul class="text-sm text-gray-700 list-disc list-inside space-y-1">
+                                                {exp.data.actions.map((action) => (
+                                                    <li>{action}</li>
+                                                ))}
+                                            </ul>
+                                        )}
                                     </div>
                                 ))}
                             </div>
@@ -186,7 +226,10 @@ const projects = await getCollection("blog", (entry) => {
                                     .map((formation) => (
                                     <div>
                                         <p class="font-semibold">{formation.data.title}</p>
-                                        <p class="text-sm text-gray-600">{formation.data.school} | {formation.data.period}</p>
+                                        <p class="text-sm text-gray-600 mb-2">{formation.data.school} | {formation.data.period}</p>
+                                        {formation.data.description && (
+                                            <p class="text-sm text-gray-700">{formation.data.description}</p>
+                                        )}
                                     </div>
                                 ))}
                             </div>
@@ -201,15 +244,9 @@ const projects = await getCollection("blog", (entry) => {
                 <h2 class="text-4xl font-bold text-center mb-12">CSR Engagement</h2>
                 <div class="max-w-4xl mx-auto">
                     <div class="bg-white p-8 rounded-lg shadow-md mb-8">
-                        <h3 class="text-2xl font-bold mb-4">Why Corporate Social Responsibility?</h3>
-                        <p class="text-gray-700 mb-4 text-justify">
-                            Corporate Social Responsibility (CSR) represents for me much more than just a concept: it's a deep conviction that tomorrow's engineers must integrate environmental and societal challenges into their professional practice.
-                        </p>
-                        <p class="text-gray-700 mb-4 text-justify">
-                            In a world facing the challenges of climate change, inclusivity, and social equity, I firmly believe that our generation of engineers has the responsibility to design sustainable and ethical technological solutions. That's why I actively engage in initiatives that have a positive impact on society and the environment.
-                        </p>
+                        <h3 class="text-2xl font-bold mb-4">My Commitment</h3>
                         <p class="text-gray-700 text-justify">
-                            My CSR commitment is realized through volunteer actions that allow me to directly contribute to causes that are close to my heart, while developing civic awareness essential to my future engineering career.
+                            Civic and environmental engagement is something that is particularly important to me. I have already participated in several volunteer activities and I intend to continue investing in initiatives that have a positive impact on society and the environment.
                         </p>
                     </div>
                     
@@ -243,59 +280,44 @@ const projects = await getCollection("blog", (entry) => {
                     <div class="bg-gray-50 p-8 rounded-lg shadow-md mb-8">
                         <h3 class="text-2xl font-bold mb-4">An International Project</h3>
                         <p class="text-gray-700 mb-4 text-justify">
-                            International experience is an integral part of the engineering curriculum at ENSEEIHT. As part of my degree, I am required to complete an experience abroad, an opportunity that particularly interests me for several reasons:
+                            As part of the engineering curriculum at ENSEEIHT, I must complete an experience abroad, which particularly interests me. I wish to go to an English-speaking country to perfect my English, discover new pedagogical approaches, and immerse myself in a different culture.
                         </p>
-                        <ul class="list-disc list-inside text-gray-700 mb-4 space-y-2">
-                            <li>Discover new pedagogical approaches and work methodologies</li>
-                            <li>Perfect my English language skills</li>
-                            <li>Immerse myself in a different culture and develop my adaptability</li>
-                            <li>Expand my international professional network</li>
-                            <li>Enrich my academic journey with global perspectives</li>
-                        </ul>
+                        <p class="text-gray-700 mb-4 text-justify">
+                            This international experience will also allow me to expand my professional network and enrich my academic journey with global perspectives, while developing my adaptability in a multicultural environment.
+                        </p>
                     </div>
                     
                     <div class="bg-white p-8 rounded-lg shadow-md mb-8 border-l-4 border-blue-500">
-                        <h3 class="text-xl font-bold mb-4">Target English-Speaking Universities</h3>
-                        <p class="text-gray-700 mb-4">I am particularly interested in the following universities for their academic excellence in computer science and digital sciences programs:</p>
-                        <div class="grid md:grid-cols-2 gap-4">
+                        <h3 class="text-xl font-bold mb-4">Target Universities</h3>
+                        <p class="text-gray-700 mb-4">I am particularly interested in the following three universities for their courses in computer science and software engineering:</p>
+                        <div class="space-y-4">
                             <div class="bg-gray-50 p-4 rounded">
-                                <p class="font-semibold">🇬🇧 United Kingdom</p>
-                                <ul class="text-sm text-gray-700 mt-2 space-y-1">
-                                    <li>• University of Edinburgh</li>
-                                    <li>• Imperial College London</li>
-                                    <li>• University College London (UCL)</li>
-                                </ul>
+                                <p class="font-semibold text-lg mb-2">🇨🇦 Concordia University - Canada</p>
+                                <p class="text-sm text-gray-700"><strong>Specialty:</strong> Computer Science and Software Engineering (CSSE)</p>
+                                <p class="text-sm text-gray-600 mt-1">Renowned program with a strong focus on software engineering and application development.</p>
                             </div>
                             <div class="bg-gray-50 p-4 rounded">
-                                <p class="font-semibold">🇨🇦 Canada</p>
-                                <ul class="text-sm text-gray-700 mt-2 space-y-1">
-                                    <li>• University of Toronto</li>
-                                    <li>• McGill University</li>
-                                    <li>• University of British Columbia</li>
-                                </ul>
+                                <p class="font-semibold text-lg mb-2">🇳🇴 Norges Teknisk-Naturvitenskapelige Universitet (NTNU) - Norway</p>
+                                <p class="text-sm text-gray-700"><strong>Department:</strong> Department of Computer Science (IDI)</p>
+                                <p class="text-sm text-gray-600 mt-1">One of Scandinavia's leading technical universities, renowned for its computer science programs.</p>
                             </div>
                             <div class="bg-gray-50 p-4 rounded">
-                                <p class="font-semibold">🇦🇺 Australia</p>
-                                <ul class="text-sm text-gray-700 mt-2 space-y-1">
-                                    <li>• Australian National University</li>
-                                    <li>• University of Melbourne</li>
-                                </ul>
-                            </div>
-                            <div class="bg-gray-50 p-4 rounded">
-                                <p class="font-semibold">🇸🇪 Sweden</p>
-                                <ul class="text-sm text-gray-700 mt-2 space-y-1">
-                                    <li>• KTH Royal Institute of Technology</li>
-                                    <li>• Chalmers University</li>
-                                </ul>
+                                <p class="font-semibold text-lg mb-2">🇦🇺 University of Sydney - Australia</p>
+                                <p class="text-sm text-gray-700"><strong>Major:</strong> Computer Science</p>
+                                <p class="text-sm text-gray-600 mt-1">Program focused on software engineering with a practical and innovative approach.</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="bg-green-50 p-6 rounded-lg shadow-md border-l-4 border-green-500">
-                        <h4 class="text-lg font-semibold mb-3">✓ Feasibility Confirmation</h4>
-                        <p class="text-gray-700 text-justify italic">
-                            "According to information provided by the school's human resources department, this international project is entirely feasible within my apprenticeship program. Similar cases have already been successfully managed, and the school has the necessary mechanisms to support students in this type of international mobility."
+                        <h4 class="text-lg font-semibold mb-3">Opportunity through Sopra Steria</h4>
+                        <p class="text-gray-700 text-justify">
+                            As an apprentice at Sopra Steria, I have the opportunity to go abroad with my company. Here is a summary of the communicated information (for confidentiality reasons):
                         </p>
+                        <ul class="list-disc list-inside text-gray-700 mt-3 space-y-2">
+                            <li><strong>Spain:</strong> Keeping the same assignment as currently, it is very easy to join the Spanish team working on the same project.</li>
+                            <li><strong>Other English-speaking countries:</strong> It is possible, but it depends on availability, openings, and the company's needs at the time of the request.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -332,7 +354,7 @@ const projects = await getCollection("blog", (entry) => {
 		const protectedContent = document.getElementById('protected-content') as HTMLElement;
 		
 		// Simple password - Change according to your needs
-		const correctPassword = 'portfolio2024';
+		const correctPassword = 'cam2025';
 		
 		unlockBtn?.addEventListener('click', () => {
 			if (passwordInput?.value === correctPassword) {

@@ -84,17 +84,44 @@ const projects = await getCollection("blog", (entry) => {
                         >
                             Télécharger mon CV
                         </a>
+                        
+                        <div class="flex gap-3 mt-4">
+                            <a 
+                                href="https://www.linkedin.com/in/nathan-pagnucco-53b7ab265/" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center gap-2 px-4 py-2 bg-blue-700 text-white rounded hover:bg-blue-800 transition"
+                                title="LinkedIn"
+                            >
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                                LinkedIn
+                            </a>
+                            <a 
+                                href="https://github.com/November304" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900 transition"
+                                title="GitHub"
+                            >
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
                     </div>
                     <div>
                         <h3 class="text-2xl font-bold mb-4">Pourquoi moi ?</h3>
                         <p class="text-gray-700 mb-4 text-justify">
-                            Actuellement en première année de cycle ingénieur à l'ENSEEIHT en alternance à Sopra Steria, je me spécialise dans le développement logiciel. Ce parcours en alternance me permet de combiner théorie académique et pratique professionnelle, notamment à travers des missions d'optimisation et de maintenance de code.
+                            Je suis actuellement étudiant en cycle ingénieur à l'ENSEEIHT en alternance à Sopra Steria. Ce format me permet de combiner formation académique et expérience professionnelle concrète.
                         </p>
                         <p class="text-gray-700 mb-4 text-justify">
-                            Passionné par le développement de jeux vidéo, je développe régulièrement des prototypes et des mécaniques de jeu avec Unity. J'aime particulièrement concevoir des environnements 2D ou 3D interactifs, travailler sur l'optimisation des performances et relever les défis créatifs du game design.
+                            En parallèle de mes études, je participe activement à la vie associative de l'école : Vice-président du journal, membre de net7 (l'association informatique), et Vice-président d'une liste. Ces engagements me permettent de développer mes compétences en communication, gestion de projet et travail d'équipe.
                         </p>
                         <p class="text-gray-700 mb-4 text-justify">
-                            Mon engagement dans la vie associative et mon intérêt pour les dimensions internationales et sociétales du métier d'ingénieur me permettent d'avoir une vision complète et responsable de mon futur rôle professionnel.
+                            Passionné par le développement de jeux vidéo, je développe régulièrement des prototypes avec Unity, ce qui me permet d'explorer ma créativité tout en perfectionnant mes compétences techniques.
                         </p>
                     </div>
                 </div>
@@ -143,24 +170,30 @@ const projects = await getCollection("blog", (entry) => {
                     <div class="bg-gray-50 p-8 rounded-lg shadow-md">
                         <h3 class="text-2xl font-bold mb-4">ENSEEIHT - Sciences du Numérique</h3>
                         <p class="text-gray-700 mb-4 text-justify">
-                            Je suis actuellement étudiant en cycle ingénieur à l'ENSEEIHT (École Nationale Supérieure d'Électrotechnique, d'Électronique, d'Informatique, d'Hydraulique et des Télécommunications) en Sciences du Numérique. Cette formation d'excellence me permet d'approfondir mes compétences dans deux domaines complémentaires :
+                            Je suis actuellement étudiant en cycle ingénieur à l'ENSEEIHT (École Nationale Supérieure d'Électrotechnique, d'Électronique, d'Informatique, d'Hydraulique et des Télécommunications) en Sciences du Numérique. Cette formation couvre un large spectre de compétences en informatique et télécommunications, avec une orientation particulière sur deux axes majeurs :
                         </p>
                         <ul class="list-disc list-inside text-gray-700 mb-4 space-y-2">
-                            <li><strong>Réseaux et Télécommunications :</strong> J'étudie l'architecture des réseaux, les protocoles de communication, la sécurité des systèmes distribués et les infrastructures de télécommunications modernes.</li>
-                            <li><strong>Développement logiciel :</strong> Je me forme aux méthodologies de développement, à l'architecture logicielle, aux bases de données, à l'intelligence artificielle et aux technologies web et mobile.</li>
+                            <li><strong>Réseaux et Télécommunications :</strong> Architecture des réseaux, protocoles de communication, sécurité des systèmes distribués et infrastructures de télécommunications modernes.</li>
+                            <li><strong>Développement logiciel :</strong> Méthodologies de développement, architecture logicielle, bases de données, intelligence artificielle et technologies web et mobile.</li>
                         </ul>
                         
                         <h4 class="text-xl font-semibold mb-3 mt-6">Engagement Associatif</h4>
                         <p class="text-gray-700 mb-4 text-justify">
-                            Au-delà de mes études, je m'investis activement dans la vie associative de l'école, notamment au sein de <strong>net7</strong>, l'association informatique de l'ENSEEIHT. En tant que <strong>Vice-président</strong>, je coordonne plusieurs activités :
+                            Au-delà de mes études, je m'investis activement dans la vie associative de l'école à travers plusieurs rôles :
                         </p>
-                        <ul class="list-disc list-inside text-gray-700 mb-4 space-y-2">
-                            <li><strong>Développement de jeux vidéo :</strong> Organisation de game jams et création de prototypes ludiques avec l'équipe.</li>
-                            <li><strong>Développement web :</strong> Conception et maintenance de sites web pour l'association et l'école.</li>
-                            <li><strong>Gestion informatique :</strong> Administration des systèmes, support technique et gestion de l'infrastructure de l'association.</li>
+                        <ul class="list-disc list-inside text-gray-700 mb-4 space-y-3">
+                            <li><strong>Vice-président d'une liste :</strong> Les listes sont deux groupes d'étudiants de première année qui s'affrontent en organisant des événements pour intégrer l'association étudiante de deuxième année dans les différents bureaux (Bureau des Élèves, Bureau des Arts, Foyer, etc.). Ce rôle me permet de développer mes compétences en organisation d'événements et en travail d'équipe.</li>
+                            <li><strong>Vice-président du journal de l'école :</strong> Cette responsabilité me permet d'améliorer mes compétences rédactionnelles et de développer mon sens du questionnement grâce aux interviews que je mène auprès d'étudiants, de professeurs et de professionnels.</li>
+                            <li><strong>Membre de net7 (association informatique) :</strong> Je travaille sur des projets informatiques concrets comme la réalisation de sites web et de tableaux de bords pour les autres associations et clubs de l'école, ce qui me permet d'appliquer mes compétences techniques au service de la communauté.</li>
                         </ul>
                         <p class="text-gray-700 text-justify">
-                            Ces responsabilités me permettent de développer mes compétences en gestion de projet, en travail d'équipe et en leadership, tout en contribuant activement à la communauté étudiante.
+                            Ces responsabilités me permettent de développer mes compétences en gestion de projet, en communication, en travail d'équipe et en leadership, tout en contribuant activement à la vie étudiante de l'école.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 max-w-4xl mx-auto text-center">
+                        <p class="text-gray-700 text-lg">
+                            Voici un aperçu de mon parcours professionnel et académique qui m'a conduit jusqu'ici.
                         </p>
                     </div>
                     
@@ -173,7 +206,14 @@ const projects = await getCollection("blog", (entry) => {
                                     .map((exp) => (
                                     <div>
                                         <p class="font-semibold">{exp.data.title}</p>
-                                        <p class="text-sm text-gray-600">{exp.data.company} | {exp.data.period}</p>
+                                        <p class="text-sm text-gray-600 mb-2">{exp.data.company} | {exp.data.period}</p>
+                                        {exp.data.actions && exp.data.actions.length > 0 && (
+                                            <ul class="text-sm text-gray-700 list-disc list-inside space-y-1">
+                                                {exp.data.actions.map((action) => (
+                                                    <li>{action}</li>
+                                                ))}
+                                            </ul>
+                                        )}
                                     </div>
                                 ))}
                             </div>
@@ -187,7 +227,10 @@ const projects = await getCollection("blog", (entry) => {
                                     .map((formation) => (
                                     <div>
                                         <p class="font-semibold">{formation.data.title}</p>
-                                        <p class="text-sm text-gray-600">{formation.data.school} | {formation.data.period}</p>
+                                        <p class="text-sm text-gray-600 mb-2">{formation.data.school} | {formation.data.period}</p>
+                                        {formation.data.description && (
+                                            <p class="text-sm text-gray-700">{formation.data.description}</p>
+                                        )}
                                     </div>
                                 ))}
                             </div>
@@ -202,15 +245,9 @@ const projects = await getCollection("blog", (entry) => {
                 <h2 class="text-4xl font-bold text-center mb-12">Engagement RSE</h2>
                 <div class="max-w-4xl mx-auto">
                     <div class="bg-white p-8 rounded-lg shadow-md mb-8">
-                        <h3 class="text-2xl font-bold mb-4">Pourquoi la Responsabilité Sociétale des Entreprises ?</h3>
-                        <p class="text-gray-700 mb-4 text-justify">
-                            La Responsabilité Sociétale des Entreprises (RSE) représente pour moi bien plus qu'un simple concept : c'est une conviction profonde que les ingénieurs de demain doivent intégrer les enjeux environnementaux et sociétaux dans leur pratique professionnelle.
-                        </p>
-                        <p class="text-gray-700 mb-4 text-justify">
-                            Dans un monde confronté aux défis du changement climatique, de l'inclusivité et de l'équité sociale, je crois fermement que notre génération d'ingénieurs a la responsabilité de concevoir des solutions technologiques durables et éthiques. C'est pourquoi je m'engage activement dans des initiatives qui ont un impact positif sur la société et l'environnement.
-                        </p>
+                        <h3 class="text-2xl font-bold mb-4">Mon Engagement</h3>
                         <p class="text-gray-700 text-justify">
-                            Mon engagement RSE se concrétise à travers des actions bénévoles qui me permettent de contribuer directement à des causes qui me tiennent à cœur, tout en développant une conscience citoyenne essentielle à ma future carrière d'ingénieur.
+                            L'engagement citoyen et environnemental est quelque chose qui me tient particulièrement à cœur. J'ai déjà participé à plusieurs actions bénévoles et j'ai l'intention de continuer à m'investir dans des initiatives qui ont un impact positif sur la société et l'environnement.
                         </p>
                     </div>
                     
@@ -242,61 +279,46 @@ const projects = await getCollection("blog", (entry) => {
                 <h2 class="text-4xl font-bold text-center mb-12">International</h2>
                 <div class="max-w-4xl mx-auto">
                     <div class="bg-gray-50 p-8 rounded-lg shadow-md mb-8">
-                        <h3 class="text-2xl font-bold mb-4">Un Projet International</h3>
+                        <h3 class="text-2xl font-bold mb-4">Mon projet international</h3>
                         <p class="text-gray-700 mb-4 text-justify">
-                            L'ouverture internationale fait partie intégrante du cursus d'ingénieur à l'ENSEEIHT. Dans le cadre de mon diplôme, je suis amené à réaliser une expérience à l'étranger, une opportunité qui m'intéresse particulièrement pour plusieurs raisons :
+                            Dans le cadre du cursus ingénieur à l'ENSEEIHT, je dois effectuer une expérience à l'étranger, ce qui m'intéresse particulièrement. Je souhaite partir dans un pays anglophone pour perfectionner mon anglais, découvrir de nouvelles approches pédagogiques et m'immerger dans une culture différente.
                         </p>
-                        <ul class="list-disc list-inside text-gray-700 mb-4 space-y-2">
-                            <li>Découvrir de nouvelles approches pédagogiques et méthodologies de travail</li>
-                            <li>Perfectionner mes compétences linguistiques en anglais</li>
-                            <li>M'immerger dans une culture différente et développer mon adaptabilité</li>
-                            <li>Élargir mon réseau professionnel à l'international</li>
-                            <li>Enrichir mon parcours académique avec des perspectives globales</li>
-                        </ul>
+                        <p class="text-gray-700 mb-4 text-justify">
+                            Cette expérience internationale me permettra également d'élargir mon réseau professionnel et d'enrichir mon parcours académique avec des perspectives globales, tout en développant mon adaptabilité dans un environnement multiculturel.
+                        </p>
                     </div>
                     
                     <div class="bg-white p-8 rounded-lg shadow-md mb-8 border-l-4 border-blue-500">
-                        <h3 class="text-xl font-bold mb-4">Universités Anglophones Ciblées</h3>
-                        <p class="text-gray-700 mb-4">Je m'intéresse particulièrement aux universités suivantes pour leur excellence académique en informatique et leurs programmes en sciences du numérique :</p>
-                        <div class="grid md:grid-cols-2 gap-4">
+                        <h3 class="text-xl font-bold mb-4">Universités Ciblées</h3>
+                        <p class="text-gray-700 mb-4">Je m'intéresse particulièrement aux trois universités suivantes pour leurs cours en informatique et en génie logiciel :</p>
+                        <div class="space-y-4">
                             <div class="bg-gray-50 p-4 rounded">
-                                <p class="font-semibold">🇬🇧 Royaume-Uni</p>
-                                <ul class="text-sm text-gray-700 mt-2 space-y-1">
-                                    <li>• University of Edinburgh</li>
-                                    <li>• Imperial College London</li>
-                                    <li>• University College London (UCL)</li>
-                                </ul>
+                                <p class="font-semibold text-lg mb-2">🇨🇦 Concordia University - Canada</p>
+                                <p class="text-sm text-gray-700"><strong>Spécialité :</strong> Computer Science and Software Engineering (CSSE)</p>
+                                <p class="text-sm text-gray-600 mt-1">Programme reconnu pour sa forte orientation en génie logiciel et développement d'applications.</p>
                             </div>
                             <div class="bg-gray-50 p-4 rounded">
-                                <p class="font-semibold">🇨🇦 Canada</p>
-                                <ul class="text-sm text-gray-700 mt-2 space-y-1">
-                                    <li>• University of Toronto</li>
-                                    <li>• McGill University</li>
-                                    <li>• University of British Columbia</li>
-                                </ul>
+                                <p class="font-semibold text-lg mb-2">🇳🇴 Norges Teknisk-Naturvitenskapelige Universitet (NTNU) - Norvège</p>
+                                <p class="text-sm text-gray-700"><strong>Département :</strong> Department of Computer Science (IDI)</p>
+                                <p class="text-sm text-gray-600 mt-1">L'une des meilleures universités techniques de Scandinavie, réputée pour ses programmes en informatique.</p>
                             </div>
                             <div class="bg-gray-50 p-4 rounded">
-                                <p class="font-semibold">🇦🇺 Australie</p>
-                                <ul class="text-sm text-gray-700 mt-2 space-y-1">
-                                    <li>• Australian National University</li>
-                                    <li>• University of Melbourne</li>
-                                </ul>
-                            </div>
-                            <div class="bg-gray-50 p-4 rounded">
-                                <p class="font-semibold">🇸🇪 Suède</p>
-                                <ul class="text-sm text-gray-700 mt-2 space-y-1">
-                                    <li>• KTH Royal Institute of Technology</li>
-                                    <li>• Chalmers University</li>
-                                </ul>
+                                <p class="font-semibold text-lg mb-2">🇦🇺 University of Sydney - Australie</p>
+                                <p class="text-sm text-gray-700"><strong>Major :</strong> Computer Science</p>
+                                <p class="text-sm text-gray-600 mt-1">Programme axé sur le software engineering avec une approche pratique et innovante.</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="bg-green-50 p-6 rounded-lg shadow-md border-l-4 border-green-500">
-                        <h4 class="text-lg font-semibold mb-3">✓ Confirmation de Faisabilité</h4>
-                        <p class="text-gray-700 text-justify italic">
-                            "Selon les informations fournies par le service des ressources humaines de l'école, ce projet international est tout à fait réalisable dans le cadre de mon cursus en alternance. Des cas similaires ont déjà été gérés avec succès, et l'école dispose des mécanismes nécessaires pour accompagner les étudiants dans ce type de mobilité internationale."
+                        <h4 class="text-lg font-semibold mb-3">Opportunité via Sopra Steria</h4>
+                        <p class="text-gray-700 text-justify">
+                            En tant qu'alternant chez Sopra Steria, j'ai l'opportunité de partir à l'étranger avec mon entreprise. Voici un résumé des informations communiquées (pour des raisons de confidentialité) :
                         </p>
+                        <ul class="list-disc list-inside text-gray-700 mt-3 space-y-2">
+                            <li><strong>Espagne :</strong> En gardant la même mission qu'actuellement, il est très facile de rejoindre l'équipe espagnole qui travaille sur le même projet.</li>
+                            <li><strong>Autres pays anglophones :</strong> C'est possible, mais cela dépend des disponibilités, des places et des besoins de l'entreprise au moment de la demande.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -333,7 +355,7 @@ const projects = await getCollection("blog", (entry) => {
 		const protectedContent = document.getElementById('protected-content') as HTMLElement;
 		
 		// Mot de passe simple - À changer selon vos besoins
-		const correctPassword = 'portfolio2024';
+		const correctPassword = 'cam2025';
 		
 		unlockBtn?.addEventListener('click', () => {
 			if (passwordInput?.value === correctPassword) {
